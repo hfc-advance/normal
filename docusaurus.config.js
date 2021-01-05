@@ -58,18 +58,95 @@ module.exports = {
       },
       items: [
         {
-          to: '/docs/enginee/babel/babelBase',
-          activeBasePath: '/docs/enginee/babel/babelBase',
+          to: '/docs/enginee/babel/babel',
+          activeBasePath: '/docs/enginee/babel/babel',
           label: 'Enginee',
           position: 'left',
         },
         {
           label: 'javascript',
-          activeBasePath: '/docs/js/goods/jsArray',
-          to: '/docs/js/goods/jsArray',
+          activeBasePath: '/docs/js/goods/jsDecorator',
+          to: '/docs/js/goods/jsDecorator',
           position: 'left',
         },
-
+        {
+          label: 'react',
+          activeBasePath: '/docs/react/goods/reactGoods1',
+          to: '/docs/react/goods/reactGoods1',
+          position: 'left',
+        },
+        {
+          label: 'ts',
+          activeBasePath: '/docs/ts/goods/tsGoods2',
+          to: '/docs/ts/goods/tsGoods2',
+          position: 'left',
+        },
+        {
+          label: 'css',
+          activeBasePath: '/docs/css/goods/cssSetKeyboard',
+          to: '/docs/css/goods/cssSetKeyboard',
+          position: 'left',
+        },
+        {
+          label: 'node',
+          activeBasePath: '/docs/node/nodeKnowledge',
+          to: '/docs/node/nodeKnowledge',
+          position: 'left',
+        },
+        {
+          label: 'javascript',
+          activeBasePath: '/docs/js/goods/jsDecorator',
+          to: '/docs/js/goods/jsDecorator',
+          position: 'left',
+        },
+        {
+          label: 'javascript',
+          activeBasePath: '/docs/js/goods/jsDecorator',
+          to: '/docs/js/goods/jsDecorator',
+          position: 'left',
+        },
+        {
+          label: 'javascript',
+          activeBasePath: '/docs/js/goods/jsDecorator',
+          to: '/docs/js/goods/jsDecorator',
+          position: 'left',
+        },
+        {
+          label: 'javascript',
+          activeBasePath: '/docs/js/goods/jsDecorator',
+          to: '/docs/js/goods/jsDecorator',
+          position: 'left',
+        },
+        {
+          label: 'javascript',
+          activeBasePath: '/docs/js/goods/jsDecorator',
+          to: '/docs/js/goods/jsDecorator',
+          position: 'left',
+        },
+        {
+          label: 'javascript',
+          activeBasePath: '/docs/js/goods/jsDecorator',
+          to: '/docs/js/goods/jsDecorator',
+          position: 'left',
+        },
+        {
+          label: 'javascript',
+          activeBasePath: '/docs/js/goods/jsDecorator',
+          to: '/docs/js/goods/jsDecorator',
+          position: 'left',
+        },
+        {
+          label: 'javascript',
+          activeBasePath: '/docs/js/goods/jsDecorator',
+          to: '/docs/js/goods/jsDecorator',
+          position: 'left',
+        },
+        {
+          label: 'other',
+          activeBasePath: '/docs/other/cookies/cookiesBaseAttr',
+          to: '/docs/other/cookies/cookiesBaseAttr',
+          position: 'left',
+        }
         /* 一级菜单下拉例子 */
         // {
         //   to: 'docs/',
