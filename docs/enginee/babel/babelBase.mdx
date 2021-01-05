@@ -1,0 +1,257 @@
+---
+id: babelBase
+title: babel基础知识
+---
+
+## polyfill 和 runtime的区别
+
+`babel` 把`javascript`分为`syntax([ˈsɪntæks]:语法；句法)`和`api`，`babel`只起到转换`syntax`的作用，那么这个时候就还需要`polyfill`来处理`api`部分的内容。
+
+:::success syntax vs api
+
+- `syntax`：在`javascript`运行时无法重写的，可以称之为`syntax`，比如:`let,const,箭头函数，装饰器`等等，在不支持的浏览器上面，无论怎么样都不支持`let`申明，所以只能直接把`let`改成支持的`var`
+
+  ```javascript
+  // 转换前
+  let array = [1, 2, 3, 4, 5, 6];
+  array.includes(item => item > 2);
+  new Promise()
+
+  // 转换后
+  var array = [1, 2, 3, 4, 5, 6];
+  array.includes(function (item) {
+    return item > 2;
+  });
+  new Promise()
+  ```
+
+  - 上面示例中：`let,箭头函数`是无法在运行行重写的，所以属于`syntax`，`Promise，includes`是属于`api`级别的
+:::
+
+### polyfill
+
+`polyfill` 直译的话是垫片的意思，那处理类似`assign,includes,map,includes` ，某些浏览器 没有的方法 最直接的办法的是 根据 一份浏览器不兼容的表格(这个`browserslist`已经完成了)，把对应浏览器不支持的语法全部重新写一遍，类似下面这样
+
+```javascript
+if (typeof Object.assign != 'function') {
+  Object.defineProperty(Object, "assign",·····)
+}
+if (!Array.prototype.includes){
+  Object.defineProperty(Array.prototype, 'includes', ·····)
+}
+if (!Array.prototype.every){
+  Object.defineProperty(Array.prototype, 'every', ·····)
+}
+```
+
+### runtime
+
+`runtime`主要解决**api污染**问题，比如：
+
+<table>
+<tr>
+<th>
+源码实现
+</th>
+<th>
+polyfill转换
+</th>
+<th>
+runtime转换
+</th>
+</tr>
+
+<tr>
+<td>
+
+```javascript
+const array = [1, 2, 3, 4, 5, 6]
+array.includes(item => item > 2)
+
+new Promise()
+```
+</td>
+<td>
+
+```javascript
+"use strict";
+
+require("core-js/modules/es.array.includes");
+
+require("core-js/modules/es.object.to-string");
+
+require("core-js/modules/es.promise");
+
+var array = [1, 2, 3, 4, 5, 6];
+array.includes(function (item) {
+  return item > 2;
+});
+new Promise();
+console.log(array);
+```
+</td>
+<td>
+
+```javascript
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault");
+
+var _promise = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/promise"));
+
+var _includes = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/instance/includes"));
+
+var array = [1, 2, 3, 4, 5, 6];
+(0, _includes.default)(array).call(array, function (item) {
+  return item > 2;
+});
+new _promise.default();
+```
+</td>
+</tr>
+</table>
+
+## 插件执行顺序
+
+- `plugin`会运行在`preset`之前。
+- `plugin`从前往后执行。
+- `preset`刚好相反，从后往前执行。
+
+:::important 分析
+
+- `preset`实则就是一系列`plugin`的集合。
+- preset 的逆向顺序主要是为了保证向后兼容，因为大多数用户的编写顺序是 ['es2015', 'stage-0']。这样必须先执行 stage-0 才能确保 babel 不报错。因此我们编排 preset 的时候，也要注意顺序，其实只要按照规范的时间顺序列出即可。
+
+  ```javascript
+  module.exports = {
+    'presets': [
+      [
+        '@babel/preset-env',
+        {
+          'useBuiltIns': 'usage',
+          'corejs': 3
+        },
+        '@babel/preset-es2015'
+      ]
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          "absoluteRuntime": false,
+          "corejs": 3,
+          "helpers": true,
+          "regenerator": true,
+          "useESModules": false,
+          "version": "7.0.0-beta.0",
+          "proposals": true
+        }
+      ]
+    ]
+  }
+  ```
+
+- 如上配置运行的一个顺序就是：`@babel/plugin-transform-runtime` > `@babel/preset-es2015` > `@babel/preset-env`
+- 像这种情况项目最终处理`api`的形式就是以`runtime`的形式解决，因为`@babel/plugin-transform-runtime`先运行
+
+  <table>
+  <tr>
+  <th>
+  源码实现
+  </th>
+  <th>
+  runtime转换
+  </th>
+  </tr>
+
+  <tr>
+  <td>
+
+  ```javascript
+  const array = [1, 2, 3, 4, 5, 6]
+  array.includes(item => item > 2)
+
+  new Promise()
+  ```
+  </td>
+  <td>
+
+  ```javascript
+  "use strict";
+
+  var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault");
+
+  var _promise = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/promise"));
+
+  var _includes = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/instance/includes"));
+
+  var array = [1, 2, 3, 4, 5, 6];
+  (0, _includes.default)(array).call(array, function (item) {
+    return item > 2;
+  });
+  new _promise.default();
+  ```
+  </td>
+  </tr>
+  </table>
+
+:::
+
+## babel 配置的环境区分
+
+可以针对开发环境以及生产环境不同的配置，可实现根据环境变量加载不同的配置。
+
+### js 判断环境变量，动态配置
+
+```javascript
+module.exports = api => {
+  api.cache(false)
+
+  const presets = []
+  const plugins = []
+
+  if (process.env.NODE === 'development') {
+    preset.push(...)
+    plugins.push(...)
+  } else {
+    preset.push(...)
+    plugins.push(...)
+  }
+
+  return {
+    presets,
+    plugins
+  }
+}
+```
+
+### 通过`env`设置不同配置
+
+```javascript
+module.exports = {
+  "env": {
+    "modern": {
+      "presets": [
+        "@babel/preset-modules"
+      ]
+    },
+    "legacy": {
+      "presets": [
+        "@babel/preset-env"
+      ]
+    }
+  }
+}
+```
+
+## 重要提示
+
+:::info
+
+- 可以通过标记语法添加`Polyfill`。
+
+    ```javascript
+    polyfill: Promise, [].includes
+    ```
+
+:::

@@ -5,9 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 module.exports = {
-  title: 'Supabase',
+  title: 'advance',
   tagline: 'The open source Firebase alternative.',
-  url: 'https://supabase.io',
+  url: 'https://hfcui.com',
   baseUrl: '/',
   favicon: '/favicon.ico',
   organizationName: 'supabase', // Usually your GitHub org/user name.
@@ -47,23 +47,20 @@ module.exports = {
     },
     image: '/img/supabase-og-image.png', // used for meta tag, in particular og:image and twitter:image
     metaImage: '/img/supabase-og-image.png',
-    googleAnalytics: {
-      trackingID: 'UA-155232740-1',
-    },
     navbar: {
       // classNames: 'shadow--md',
       // title: 'supabase',
       hideOnScroll: true,
       logo: {
         alt: 'Supabase',
-        src: '/supabase-light.svg',
-        srcDark: '/supabase-dark.svg',
+        src: '/advance-dark.svg',
+        srcDark: '/advance-dark.svg',
       },
       items: [
         {
-          to: '/docs',
-          activeBasePath: '/docs/guides/',
-          label: 'Guides',
+          to: '/docs/enginee/babel/babelBase',
+          activeBasePath: '/docs/enginee/babel/babelBase',
+          label: 'Enginee',
           position: 'left',
         },
         {
@@ -116,14 +113,7 @@ module.exports = {
               to: '/docs/realtime/client/realtime-client',
             },
           ],
-        },
-        // {
-        //   to: '/showcase',
-        //   label: 'Showcase',
-        //   position: 'right',
-        // },
-        // { to: '/docs/pricing', label: 'Pricing', position: 'right' },
-        { href: 'https://app.supabase.io', label: 'Login', position: 'right' },
+        }
       ],
     },
     prism: {

@@ -1225,3 +1225,8 @@ h4.method-list-item-label .method-list-item-validation {
   overflow: hidden;
   border: 2px solid var(--custom-border-color);
 }
+
+.navbar__brand {
+  height: 3rem;
+  margin-right: 0;
+}

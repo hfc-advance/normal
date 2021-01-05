@@ -10,26 +10,63 @@ const postgrestClient = require('./sidebar_spec_postgrest')
 const realtimeClient = require('./sidebar_spec_realtime')
 const supabaseClient = require('./sidebar_spec_supabase')
 
+// Babel: ['enginee/babel/babel', 'enginee/babel/babelPlugins', 'enginee/babel/babelVersions', 'enginee/babel/babelPluginAna', 'enginee/babel/babelBase'],
+// webpack: ['enginee/webpack/webpackOftenPkg', 'enginee/webpack/webpackFood', 'enginee/webpack/webpackComponentNotice', 'enginee/webpack/webpackPlugin'],
+// npm: ['enginee/npm/packagejsonKeys', 'enginee/npm/npmShell', 'enginee/npm/.npmrc', 'enginee/npm/node_modules'],
+// typescript: ['enginee/typescript/typescriptBseconfig'],
+// postcss: ['enginee/postcss/postcssPlugin'],
+// prettier: ['enginee/prettier/prettierPlugin'],
+// 配置项: ['enginee/projectConfigItem', 'enginee/projectUpdatePac'],
+// stylus: ['enginee/stylus/stylusUsefulPlugin']
 module.exports = {
   goTrueClient: goTrueClient.docs,
   postgrestClient: postgrestClient.docs,
   realtimeClient: realtimeClient.docs,
   supabaseClient: supabaseClient.docs,
   docs: [
-    { type: 'category', label: 'Introduction', items: ['about', 'faq'], collapsed: false },
+    { type: 'category', label: 'Babel', items: ['enginee/babel/babel', 'enginee/babel/babelPlugins', 'enginee/babel/babelVersions', 'enginee/babel/babelPluginAna', 'enginee/babel/babelBase'], collapsed: false },
     {
       type: 'category',
-      label: 'Getting Started',
+      label: 'webpack',
       collapsed: false,
-      items: ['guides/platform', 'guides/database', 'guides/auth', 'guides/client-libraries'],
+      items: ['enginee/webpack/webpackOftenPkg', 'enginee/webpack/webpackFood', 'enginee/webpack/webpackComponentNotice', 'enginee/webpack/webpackPlugin'],
     },
     {
       type: 'category',
-      label: 'See Also',
+      label: 'npm',
       collapsed: false,
-      items: ['guides/examples', 'pricing', 'support', 'handbook/contributing', 'company/terms'],
+      items: ['enginee/npm/packagejsonKeys', 'enginee/npm/npmShell', 'enginee/npm/.npmrc', 'enginee/npm/node_modules'],
     },
-    // Handbook: ['handbook/introduction', 'handbook/contributing'],
+    {
+      type: 'category',
+      label: 'typescript',
+      collapsed: false,
+      items: ['enginee/typescript/typescriptBseconfig'],
+    },
+    {
+      type: 'category',
+      label: 'postcss',
+      collapsed: false,
+      items: ['enginee/postcss/postcssPlugin'],
+    },
+    {
+      type: 'category',
+      label: 'prettier',
+      collapsed: false,
+      items: ['enginee/prettier/prettierPlugin'],
+    },
+    {
+      type: 'category',
+      label: '配置项',
+      collapsed: false,
+      items: ['enginee/projectConfigItem', 'enginee/projectUpdatePac'],
+    },
+    {
+      type: 'category',
+      label: 'stylus',
+      collapsed: false,
+      items: ['enginee/stylus/stylusUsefulPlugin'],
+    },
   ],
   goTrueServer: [
     {
