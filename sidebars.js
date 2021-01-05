@@ -12,6 +12,8 @@ const cssdoc = require('./sidebar/sidebar_css.js')
 const nodedoc = require('./sidebar/sidebar_node.js')
 const packagedoc = require('./sidebar/sidebar_package.js')
 const gooddoc = require('./sidebar/sidebar_good.js')
+const gitdoc = require('./sidebar/sidebar_git.js')
+const tooldoc = require('./sidebar/sidebar_tool.js')
 const otherdoc = require('./sidebar/sidebar_other.js')
 
 module.exports = {
@@ -23,5 +25,7 @@ module.exports = {
   nodedoc,
   packagedoc,
   gooddoc,
+  gitdoc,
+  tooldoc,
   otherdoc
 }
