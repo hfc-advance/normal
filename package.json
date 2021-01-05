@@ -10,12 +10,12 @@
     "gen:gotrue": "ts-node ReferenceGenerator.ts -o docs/gotrue/client spec/gotrue.yml",
     "gen:postgrest": "ts-node ReferenceGenerator.ts -o docs/postgrest/client spec/postgrest.yml",
     "gen:realtime": "ts-node ReferenceGenerator.ts -o docs/realtime/client spec/realtime.yml",
-    "gen:supabase": "ts-node ReferenceGenerator.ts -o docs/client spec/supabase.yml"
+    "gen:supabase": "ts-node ReferenceGenerator.ts -o docs/client spec/supabase.yml",
+    "publish": "npm run build && node scripts/publish.js"
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-alpha.63",
     "@docusaurus/preset-classic": "^2.0.0-alpha.63",
-    "@docusaurus/theme-live-codeblock": "^2.0.0-alpha.70",
     "@kiwicopple/prism-react-renderer": "github:kiwicopple/prism-react-renderer",
     "classnames": "^2.2.6",
     "mermaid": "^8.6.4",
@@ -37,10 +37,13 @@
     ]
   },
   "devDependencies": {
+    "@docusaurus/theme-live-codeblock": "^2.0.0-alpha.63",
     "@types/node": "^14.14.14",
+    "ali-oss-publish": "^0.4.0",
     "axios": "^0.19.2",
     "babel-plugin-css-modules-transform": "^1.6.2",
     "clsx": "^1.1.1",
+    "fs-extra": "^8.1.0",
     "js-yaml": "^3.14.0",
     "minimist": "^1.2.5",
     "ts-node": "^9.0.0",
