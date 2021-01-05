@@ -94,15 +94,15 @@ module.exports = {
           position: 'left',
         },
         {
-          label: 'javascript',
-          activeBasePath: '/docs/js/goods/jsDecorator',
-          to: '/docs/js/goods/jsDecorator',
+          label: 'package',
+          activeBasePath: '/docs/package/js/jsMaybePkg',
+          to: '/docs/package/js/jsMaybePkg',
           position: 'left',
         },
         {
-          label: 'javascript',
-          activeBasePath: '/docs/js/goods/jsDecorator',
-          to: '/docs/js/goods/jsDecorator',
+          label: 'good',
+          activeBasePath: '/docs/goods/performance/cachePerformance',
+          to: '/docs/goods/performance/cachePerformance',
           position: 'left',
         },
         {

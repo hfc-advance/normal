@@ -10,6 +10,8 @@ const reactdoc = require('./sidebar/sidebar_react.js')
 const tsdoc = require('./sidebar/sidebar_ts.js')
 const cssdoc = require('./sidebar/sidebar_css.js')
 const nodedoc = require('./sidebar/sidebar_node.js')
+const packagedoc = require('./sidebar/sidebar_package.js')
+const gooddoc = require('./sidebar/sidebar_good.js')
 const otherdoc = require('./sidebar/sidebar_other.js')
 
 module.exports = {
@@ -19,5 +21,7 @@ module.exports = {
   tsdoc,
   cssdoc,
   nodedoc,
+  packagedoc,
+  gooddoc,
   otherdoc
 }
