@@ -6,5 +6,24 @@ module.exports = [
       "other/cookies/cookiesBaseAttr", "other/cookies/cookiesAttack"
     ],
     "collapsed": false
+  },
+  {
+    "type": "category",
+    "label": "vscode",
+    "items": [
+      "other/vscode/vscodeShortcutKey",
+      "other/vscode/advanceVscode",
+      "other/vscode/vscodeJsdoc"
+    ],
+    "collapsed": false
+  },
+  {
+    "type": "category",
+    "label": "mac",
+    "items": [
+      "other/mac/macShortcurKey",
+      "other/mac/macOSAutoOperation"
+    ],
+    "collapsed": false
   }
 ]
