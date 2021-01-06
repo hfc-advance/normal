@@ -1427,7 +1427,7 @@ h4.method-list-item-label .method-list-item-validation {
 }
 
 .admonition-important {
-  --ra-admonition-background-color: var(--ra-color-important);
+  --ra-admonition-background-color: var(--ra-color-tip);
 }
 
 .admonition-tip {
