@@ -184,3 +184,26 @@ class Child extends Parent {
     ```
 
 :::
+
+## 构造函数参数创建和分配的简洁方法
+
+当在构造函数的参数上面直接加上修饰符，那么这个变量将被直接定义和赋值。
+
+```typescript
+class Person {
+  /**
+   * @param age 年龄
+   */
+  constructor (public age: number) {}
+}
+
+  // 相当于 👇
+
+class Person {
+  age: number;
+
+  constructor (age) {
+    this.age = age
+  }
+}
+```
