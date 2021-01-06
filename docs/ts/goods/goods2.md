@@ -63,4 +63,30 @@ const application = {
   }
   ```
 
+- `as` 作为一个可以执行在赋值语句之后特殊的定义类型的方式，当不能直接定义类型的时候的大多数都可以采用`as`来定义。如定义`class`中的其中一个属性：
+
+  ```typescript
+  class Person {
+    height = 30 as number;
+  }
+  ```
+
 :::
+
+### 3. 单独为 class 中的一个属性定义类型
+
+- 第一种方式：
+
+```typescript
+class Person {
+  height: number = 30;
+}
+```
+
+- 第二种方式：
+
+```typescript
+class Person {
+  height = 30 as number;
+}
+```
