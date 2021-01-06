@@ -80,3 +80,107 @@ type TPerson = Person ✅
 
   - 生成的接口，包含了类的所有`实例属性和方法`。
 :::
+
+## getter 和 setter
+
+类属性可以具有`getter`和`setter`。使用`getter`可以计算一个值以作为属性值返回，而使用`setter`可以让您在设置属性时运行任意代码。
+
+```typescript
+class Vector2 {
+  private _x = 0;
+
+  get x() { return this._x; }
+
+  set x(value: number) {
+    this._x = value;
+    this.calculateLength();
+  }
+
+  constructor(x: number, y: number) {
+    this._x = x;
+    this._y = y;
+    this.calculateLength();
+}
+}
+```
+
+## 访问修饰符
+
+修饰符可以设置属性的安全级别，以及访问权限。
+
+- `public 默认`
+- `private`
+- `protected`
+- `readonly`
+
+:::warning
+
+访问修饰符是`ts`自有的，访问权限验证只能在编译阶段验证，对于运行时代码验证可以采用`#`私有字段来解决。
+:::
+
+## 抽象类
+
+抽象类中可以定义抽象方法和属性，子类继承必须实现抽象类中的抽象属性和方法
+
+```typescript
+abstract class Parent {
+  abstract height: number;
+  abstract getHeight(): number;
+
+  age = 26
+}
+
+class Child extends Parent {
+  height = 189;
+
+  getHeight () {
+    return this.age
+  }
+}
+```
+
+:::warning
+
+- `extends`和`implements`的区别
+
+  - `implements`后面跟的是`ts`类型，如果后面是`class`，那也是`class`背后生成的接口，所以在`implements`无论是抽象类还是具体的类，类里面所有的方法和属性，都必须要定义和实现
+
+    ```typescript
+    abstract class Parent {
+      abstract height: number;
+      abstract getHeight(): number;
+      age = 26
+    }
+
+    class Child implements Parent { ❎
+      height = 189;
+      getHeight () {
+        return this.age
+      }
+    }
+
+    class Child implements Parent { ✅
+      height = 189;
+      getHeight () {
+        return this.age
+      }
+      age = 26
+    }
+    ```
+
+  - `extends`继承的时候，如果子类定义了`constructor`，那么必须调用`super`执行父类的构造函数。
+
+    ```typescript
+    class Child extends Parent { ✅
+      constructor () {
+        super()
+      }
+    }
+
+    class Child extends Parent { ❎
+      constructor () {
+      }
+    }
+    ```
+
+:::
