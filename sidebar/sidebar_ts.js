@@ -6,7 +6,8 @@ module.exports = [
       "ts/goods/tsGoods2",
       "ts/goods/tsGoods1",
       "ts/goods/tsConfig",
-      "ts/goods/tsAdvanceType"
+      "ts/goods/tsAdvanceType",
+      "ts/goods/tsClass"
     ],
     "collapsed": false
   },
