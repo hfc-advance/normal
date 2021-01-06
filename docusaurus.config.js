@@ -54,8 +54,8 @@ module.exports = {
       hideOnScroll: true,
       logo: {
         alt: 'Supabase',
-        src: '/advance-dark.svg',
-        srcDark: '/advance-dark.svg',
+        src: '/read.svg',
+        srcDark: '/read.svg',
       },
       items: [
         {
