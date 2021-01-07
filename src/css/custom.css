@@ -1456,3 +1456,6 @@ h4.method-list-item-label .method-list-item-validation {
 .token-line.docusaurus-highlight-code-line .token.comment {
   color: #888888 !important;
 }
+.admonition h5 {
+  text-transform: none !important;
+}
