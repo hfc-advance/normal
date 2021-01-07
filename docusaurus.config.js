@@ -83,6 +83,12 @@ module.exports = {
           position: 'left',
         },
         {
+          label: 'vue',
+          activeBasePath: '/docs/vue/base/vueChange',
+          to: '/docs/vue/base/vueChange',
+          position: 'left',
+        },
+        {
           label: 'css',
           activeBasePath: '/docs/css/goods/cssSetKeyboard',
           to: '/docs/css/goods/cssSetKeyboard',
@@ -171,7 +177,7 @@ module.exports = {
       defaultLanguage: 'js',
       plugins: ['line-numbers', 'show-language'],
       theme: require('@kiwicopple/prism-react-renderer/themes/vsDark'),
-      darkTheme: require('@kiwicopple/prism-react-renderer/themes/vsDark'),
+      darkTheme: require('@kiwicopple/prism-react-renderer/themes/palenight'),
     },
     // footer: {
     //   links: [
