@@ -6,5 +6,13 @@ module.exports = [
       "tools/web/oftenWebTools"
     ],
     "collapsed": false
+  },
+  {
+    "type": "category",
+    "label": "动画",
+    "items": [
+      "tools/animation/toolKeynote"
+    ],
+    "collapsed": false
   }
 ]
