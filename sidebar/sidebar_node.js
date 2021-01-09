@@ -19,5 +19,13 @@ module.exports = [
       "node/debug/nodeDebug"
     ],
     "collapsed": false
+  },
+  {
+    "type": "category",
+    "label": "package",
+    "items": [
+      "node/package/nodePkgFile"
+    ],
+    "collapsed": false
   }
 ]
