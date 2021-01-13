@@ -14,3 +14,4 @@ sidebar_label: keynote演示动画
 ## 参考
 
 ### [一文教会大家做代码演示GIF](https://juejin.cn/post/6909481718156099597)
+### [为什么我喜欢 Keynote？以及我用这 5 个功能提升幻灯片制作效率](https://sspai.com/post/60529)

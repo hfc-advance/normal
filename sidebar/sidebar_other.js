@@ -25,5 +25,14 @@ module.exports = [
       "other/mac/macOSAutoOperation"
     ],
     "collapsed": false
+  },
+  {
+    "type": "category",
+    "label": "jsdoc",
+    "items": [
+      "other/jsdoc/jsdoc@example",
+      "other/jsdoc/jsdoc@param"
+    ],
+    "collapsed": false
   }
 ]
