@@ -1,5 +1,5 @@
 ---
-id: webpackOftenPkg
+id: webpackOftenPkg1
 title: 常用的webpack插件
 hide_title: true
 sidebar_label: 常用插件

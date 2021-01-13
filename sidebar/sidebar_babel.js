@@ -4,7 +4,7 @@ module.exports = [
     type: 'category',
     label: 'webpack',
     collapsed: false,
-    items: ['enginee/webpack/webpackOftenPkg', 'enginee/webpack/webpackFood', 'enginee/webpack/webpackComponentNotice', 'enginee/webpack/webpackPlugin'],
+    items: ['enginee/webpack/webpackOftenPkg', 'enginee/webpack/webpackFood', 'enginee/webpack/webpackComponentNotice', 'enginee/webpack/webpackPlugin', 'enginee/webpack/webpackImagePlugin'],
   },
   {
     type: 'category',
