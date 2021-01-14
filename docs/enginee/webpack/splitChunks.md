@@ -64,11 +64,6 @@ sidebar_label: splitChunks
 `bundle`: 也就是经过`webpack`编译过后生成的最终文件。
 :::
 
-:::warning
+### 编译过程
 
-- 
-:::
-
-## cacheGroup.test
-
-控制当前缓存组的模块([module](#module))
+![splitChunks](/img/splitChunks.gif)
