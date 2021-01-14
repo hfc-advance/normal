@@ -63,3 +63,12 @@ sidebar_label: splitChunks
 :::success bundle
 `bundle`: 也就是经过`webpack`编译过后生成的最终文件。
 :::
+
+:::warning
+
+- 
+:::
+
+## cacheGroup.test
+
+控制当前缓存组的模块([module](#module))
