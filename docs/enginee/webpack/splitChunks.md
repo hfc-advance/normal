@@ -5,27 +5,61 @@ hide_title: true
 sidebar_label: splitChunks
 ---
 
-### chunks
+## 理解 module chunk bundle
 
-- `async`: 默认值
-- `initial`
-- `all`
-- `function (chunk)`
+![webpack-module_chunk_bundle](/img/webpack-module_chunk_bundle.jpeg)
 
-![webpack_load](/img/webpack_load.001.jpeg)
+### module
 
-:::important
+:::success module
+`module`: 也就是开发编写的项目文件，每个文件都是一个`module`。包括依赖项以及依赖项里面的每个依赖项。
 
-- `initial`表示`”直接引入的模块“`。
-  - 首先模块自己是被`静态语法导入`
-  - 而且模块的父级，以及父级的父级也是被`静态语法导入`。
-  - 上图中：`initial`模式包含了：`main.js，demo1.js`，虽然`demo2_3.js`是被`demo2.js`静态语法导入的，但是父级`demo2.js`是异步的，所以后面所有的自己都是异步的。
+  ```javascript title="index.js"
+  import Vue from 'vue'
+  import App from './app.vue'
+  import router from './router.js'
+  import store from './store.js'
 
-- `async`标识`”异步加载的模块“`。
-  - 模块自己是被`异步加载的方式导入的`
-  - 或者父级，或者父级的父级存在`异步加载的方式导入的`。
+  const vue = new Vue({
+    router,
+    store,
+    render: (h) => h(App)
+  })
+  ```
 
-- `all`包含了`async`和`initial`。表示所有类型的问题。
+  - `index.js`，`node_modules/vue/dist/vue.esm.js`，`app.vue`，`router.js`，`store.js` 等都是 `module`
+  - 以及`babel polyfill`注入的文件等都是`module`
+  - 以及`app.vue router.js store.js`等文件里面的依赖项都是`module`
+:::
 
-- `function (chunk)`返回`true`值的模块会被包含进去
+### chunk
+
+:::success chunk
+`chunk`: `webpack`用来分析依赖的入口，产生`chunk`，有两种形式：
+  - 入口文件`entry`
+  - 才用异步方式导入的文件`import()`
+
+  ```javascript
+  import Vue from 'vue'
+  import App from './app.vue'
+  import router from './router.js'
+  import store from './store.js'
+
+  import(/* webpackChunkName: "demo1" */'./demo1')
+    .then(console.log)
+  const vue = new Vue({
+    router,
+    store,
+    render: (h) => h(App)
+  })
+  ```
+
+    - `chunks`有两个：`index`， `demo1`
+
+:::
+
+### bundle
+
+:::success bundle
+`bundle`: 也就是经过`webpack`编译过后生成的最终文件。
 :::
