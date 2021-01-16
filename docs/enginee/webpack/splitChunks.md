@@ -99,3 +99,67 @@ sidebar_label: splitChunks
     ```
     - `index.js`是`entry`，这个文件会进入到`cacheGroup.chunks`里面校验。`app.vue`这个`module`不属于`chunk`，但是会根据前面`index.js`这个`chunk`的校验值来决定是否进入到`cacheGroup.name`中进行下一步。
 :::
+
+### cacheGroup.test
+
+`function (module, chunk) => boolean; RegExp; string`
+
+控制这个`group`选择的`module`。
+
+:::warning
+
+- `RegExp`匹配的是`module.resource`也就是源文件的路径。
+- `string`匹配的是`chunk.name`，如果存在这个`chunk`，那么就是这个`chunk`下的所有`bundle`。
+:::
+
+### cacheGroup.chunks
+
+`all | initial | async | function (chunk)`
+
+控制这个`group`选择的`chunk`，也就是命中的`chunk`下的所有`module`。
+
+:::warning
+
+- 这个配置项是基于`chunk`并不是基于`module`的，如果这个`module`不属于`chunk`，那就是这个`module`所在的`chunk`的校验值。
+- 相当于是`cacheGroup.test`的`string`匹配模式。
+- 当前`module`的`chunk`如果不符合这个`chunks`，那么也是直接退出这个`cacheGroup`
+:::
+
+### cacheGroup.name
+
+`boolean = false | function (module, chunks, cacheGroupKey) => string | string`
+
+用于控制切割块的名字。
+
+:::success 不同的`module`当`name`相同的时候，都会打包到一起
+
+- `boolean`
+  - 只有`false`没有`true`的选项，因为`false`表示不设置名字也就是和`chunk`保持同样的名字，这样就是不切割`module`，全部打包到`chunk`中去。
+  - 设置`true`没有任何语义，但是也会起作用，效果和`false`一样。
+  - 也就是只要是`Boolean`类型的值，效果都一致：就是不切割模块，打包到`chunk`中。
+
+- `function (module, chunks, cacheGroupKey) => string`：当`name`的值为`function`类型的时候，认为方法的返回值只有两种类型`undefined | string`。
+  - `false`: 当返回值是`false`的时候，会当成`undefined`，也就是没有设置`name`，那么这个时候：
+    - 按照资源`id`来设置打包资源的文件名称如：`1.js`
+    - 虽然没有设置名字但是资源还是会打包到一个文件如`1.js`
+  - `true`: 当返回值是`true`的时候，会当成字符串`"true"`来处理。
+    - 打包资源的文件名称：`true.js`
+    - 资源还是会打包到一个文件`true.js`
+  - `string`: 可以根据`module`的路径以及所属`chunk`的名称来返回不同的名字，这样就会切割出多个`bundle`。
+
+    ```javascript
+    {
+      commons: {
+        test: /[\\/]node_modules[\\/]/,
+        // cacheGroupKey here is `commons` as the key of the cacheGroup
+        name(module, chunks, cacheGroupKey) {
+          const moduleFileName = module.identifier().split('/').reduceRight(item => item);
+          const allChunksNames = chunks.map((item) => item.name).join('~');
+          return `${cacheGroupKey}-${allChunksNames}-${moduleFileName}`;
+        }
+      }
+    }
+    ```
+
+- `string`: 所有的`module`都会打包到这个包中。
+:::
