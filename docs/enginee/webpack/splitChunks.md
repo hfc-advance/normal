@@ -163,3 +163,22 @@ sidebar_label: splitChunks
 
 - `string`: 所有的`module`都会打包到这个包中。
 :::
+
+### cacheGroup.minSize
+
+约定”生成块“的最小大小。单位`byte; 1kb = 1024byte`
+
+:::warning
+当切割出来的块，没有达到这个最小大小，那么将不会被切割出来。
+:::
+
+### cacheGroup.maxSize
+
+`webpack`尝试将大于`maxSize`大小的`chunk`，进一步的切割，切割出来的部分不能小于`minSize`。
+
+:::warning `maxSize`的优先级比较低
+
+- 当`chunk`即使大于`maxSize`，但是已经不能切割了，比如这个`chunk`内部的代码全部是内联的，并没有`module`，那就没有办法切割了。
+- 当`chunk`能够进一步的切割，但是里面的`module`都大于`minSize`，那么也不会进一步的切割。
+- 优先级：`minSize` > `maxSize` > `maxInitialRequest/maxAsyncRequests`
+:::
