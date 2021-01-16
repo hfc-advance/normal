@@ -182,3 +182,7 @@ sidebar_label: splitChunks
 - 当`chunk`能够进一步的切割，但是里面的`module`都大于`minSize`，那么也不会进一步的切割。
 - 优先级：`minSize` > `maxSize` > `maxInitialRequest/maxAsyncRequests`
 :::
+
+### cacheGroup.minChunks
+
+在被切割之前，`module`最少要被不同`chunk`共享的次数。
