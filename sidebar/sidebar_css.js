@@ -31,7 +31,8 @@ module.exports = [
     "label": "动画",
     "items": [
       "css/animation/cssCubicBezier",
-      "css/animation/cssSvgStrokeDasharray"
+      "css/animation/cssSvgStrokeDasharray",
+      "css/animation/cssSteps"
     ],
     "collapsed": false
   }
