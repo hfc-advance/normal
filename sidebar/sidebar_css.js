@@ -7,7 +7,6 @@ module.exports = [
       "css/goods/cssNormalStyle",
       "css/goods/cssLayoutSkill",
       "css/goods/cssGoods",
-      "css/goods/cssAnimation",
       "css/goods/cssImg"
     ],
     "collapsed": false
@@ -24,6 +23,15 @@ module.exports = [
       "css/attributes/cssBaseline",
       "css/attributes/cssLineHeight",
       "css/attributes/cssVerticalAlign"
+    ],
+    "collapsed": false
+  },
+  {
+    "type": "category",
+    "label": "动画",
+    "items": [
+      "css/animation/cssCubicBezier",
+      "css/animation/cssSvgStrokeDasharray"
     ],
     "collapsed": false
   }
