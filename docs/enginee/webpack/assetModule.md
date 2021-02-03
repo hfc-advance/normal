@@ -97,6 +97,27 @@ favicon // data:image/png;base64,iVBORw0KGgoAAAANSUhEU...
       },
     };
     ```
+  - 也可以是一个方法 `function (source, { filename, module }) => boolean`，返回 `true`, `webpack` 将模块作为一个 `Base64` 编码的字符串注入到包中， 否则模块文件会被生成到输出的目标目录中。
+
+    ```javascript
+    module.exports = {
+      //...
+      module: {
+        rules: [
+          {
+            //...
+            parser: {
+              dataUrlCondition: (source, { filename, module }) => {
+                const content = source.toString();
+                return content.includes('some marker');
+              }
+            }
+          }
+        ]
+      }
+    };
+
+  ```
 
 :::
 
