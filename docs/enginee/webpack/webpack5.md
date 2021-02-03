@@ -36,3 +36,11 @@ file:///path/to/your/project/src/index.js
 ### 新的 Asset Module
 
 `webpack5`对资产模块做了原生支持，可以不再使用`loader`来处理。[Asset Module](/docs/enginee/webpack/webpackAssetModule)
+
+### 原生 web worker 支持
+
+将 `Asset Module` 的 `new URL`，`webpack` 将输出 `worker`文件，并自动为 `webWorker`创建一个新的入口点。
+
+```javascript
+new Worker(new URL("./worker.js", import.meta.url))
+```
