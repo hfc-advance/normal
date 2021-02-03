@@ -70,6 +70,37 @@ favicon // data:image/png;base64,iVBORw0KGgoAAAANSUhEU...
 导出一个 `data URI` 和发送一个单独的文件之间自动选择。之前通过使用 `url-loader`，并且配置资源体积限制实现。
 
 :::warning
+- `webpack` 将按照默认条件，自动地在 `resource` 和 `inline` 之间进行选择：小于 `8kb` 的文件，将会视为 `inline` 模块类型，否则会被视为 `resource` 模块类型。
+  - 可以通过 `Rule.parser.dataUrlCondition.maxSize`来修改这个配置。
+
+    ```javascript {16}
+
+    module.exports = {
+      entry: './src/index.js',
+      output: {
+        filename: 'main.js',
+        path: path.resolve(__dirname, 'dist')
+      },
+      module: {
+        rules:
+        [
+          {
+            test: /\.txt/,
+            type: 'asset',
+            parser: {
+              dataUrlCondition: {
+                maxSize: 4 * 1024 // 4kb
+              }
+            }
+          }
+        ]
+      },
+    };
+    ```
+
+:::
+
+:::warning
 
 - 如果在`webpack5`中使用`loader`来处理模块，需要将`asset type`设置成`javascript/auto`，否则会导致多次处理，有可能产生`asset`重复。
 
