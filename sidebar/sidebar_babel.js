@@ -42,4 +42,10 @@ module.exports = [
     collapsed: false,
     items: ['enginee/stylus/stylusUsefulPlugin'],
   },
+  {
+    type: 'category',
+    label: 'lerna',
+    collapsed: false,
+    items: ['enginee/lerna/lernaApi']
+  }
 ]
