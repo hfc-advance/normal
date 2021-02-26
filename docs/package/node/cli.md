@@ -167,6 +167,45 @@ vueDocs.parse(filePath).then(ci => {
 })
 ```
 
+### [![4. conf 跨平台持久化储存数据](https://img.shields.io/github/stars/sindresorhus/conf?label=conf&style=social)](https://github.com/sindresorhus/conf)
+
+将数据保存在系统目录，达到持久化存储的作用。
+
+```javascript
+const Conf = require('conf');
+
+const config = new Conf();
+
+config.set('unicorn', '🦄');
+console.log(config.get('unicorn'));
+//=> '🦄'
+
+// Use dot-notation to access nested properties
+config.set('foo.bar', true);
+console.log(config.get('foo'));
+//=> {bar: true}
+
+config.delete('unicorn');
+console.log(config.get('unicorn'));
+//=> undefined
+```
+
+### [![5. observable-conf 监听持久化存储的数据变化](https://img.shields.io/github/stars/SamVerschueren/observable-conf?label=observable-conf&style=social)](https://github.com/SamVerschueren/observable-conf)
+
+监听通过 `Conf` 保存的数据变化
+
+```javascript
+const Conf = require('observable-conf');
+const config = new Conf();
+
+config.select('unicorn').subscribe(value => {
+	console.log(value);
+	//=> '🦄'
+})
+
+config.set('unicorn', '🦄');
+```
+
 ## 执行命令
 
 ### [![1. git-js 快速执行git命令](https://img.shields.io/github/stars/steveukx/git-js?label=git-js&style=social)](https://github.com/steveukx/git-js)
