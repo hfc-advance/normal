@@ -255,3 +255,38 @@ render(<Counter />);
 ```
 
 ![ink-package](/img/ink-gif.svg)
+
+### [![2. chalk-animation 字体动画](https://img.shields.io/github/stars/bokub/chalk-animation?label=chalk-animation&style=social)](https://github.com/bokub/chalk-animation)
+
+给文字添加动画。
+
+![rainbow](../../../static/img/687474703a2f2f692e696d6775722e636f6d2f6e61706478646e2e676966.gif)
+
+### [![3. gradient-string 终端显示渐变色字体](https://img.shields.io/github/stars/bokub/gradient-string?label=gradient-string&style=social)](https://github.com/bokub/gradient-string)
+
+终端显示渐变色字体
+
+```javascript
+const gradient = require('gradient-string');
+
+console.log(gradient('cyan', 'pink')('Hello world!'));
+```
+
+![gradient-string](/img/687474703a2f2f6269742e6c792f6772616469656e742d737472696e672d70726576696577.png)
+
+### [![4. ora Loading效果](https://img.shields.io/github/stars/sindresorhus/ora?label=ora&style=social)](https://github.com/sindresorhus/ora)
+
+终端显示 `Loading`
+
+```javascript
+const ora = require('ora');
+
+const spinner = ora('Loading unicorns').start();
+
+setTimeout(() => {
+	spinner.color = 'yellow';
+	spinner.text = 'Loading rainbows';
+}, 1000);
+```
+
+![ora](../../../static/img/screenshot-2.gif)
