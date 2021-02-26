@@ -318,3 +318,31 @@ console.log(table.toString());
 ```
 
 ![cli-table](../../../static/img/687474703a2f2f692e696d6775722e636f6d2f73597134542e706e67.png)
+
+## 服务器
+
+### [![1. got 友好的http请求，文件上传下载](https://img.shields.io/github/stars/sindresorhus/got?label=got&style=social)](https://github.com/sindresorhus/got)
+
+友好的 `http` 请求
+
+```javascript title="文件上传下载"
+const stream = require('stream');
+const {promisify} = require('util');
+const fs = require('fs');
+const got = require('got');
+
+const pipeline = promisify(stream.pipeline);
+
+(async () => {
+	await pipeline(
+		got.stream('https://sindresorhus.com'),
+		fs.createWriteStream('index.html')
+	);
+
+	// For POST, PUT, PATCH, and DELETE methods, `got.stream` returns a `stream.Writable`.
+	await pipeline(
+		fs.createReadStream('index.html'),
+		got.stream.post('https://sindresorhus.com')
+	);
+})();
+```
