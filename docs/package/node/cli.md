@@ -294,3 +294,27 @@ setTimeout(() => {
 ```
 
 ![ora](../../../static/img/screenshot-2.gif)
+
+### [![5. cli-table 终端渲染table](https://img.shields.io/github/stars/Automattic/cli-table?label=cli-table&style=social)](https://github.com/Automattic/cli-table)
+
+终端渲染 `table` 样式
+
+```javascript
+var Table = require('cli-table');
+
+// instantiate
+var table = new Table({
+    head: ['TH 1 label', 'TH 2 label']
+  , colWidths: [100, 200]
+});
+
+// table is an Array, so you can `push`, `unshift`, `splice` and friends
+table.push(
+    ['First value', 'Second value']
+  , ['First value', 'Second value']
+);
+
+console.log(table.toString());
+```
+
+![cli-table](../../../static/img/687474703a2f2f692e696d6775722e636f6d2f73597134542e706e67.png)
