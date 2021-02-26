@@ -206,6 +206,10 @@ config.select('unicorn').subscribe(value => {
 config.set('unicorn', '🦄');
 ```
 
+### [6. rimraf 删除文件](https://github.com/isaacs/rimraf)
+
+跨平台 `rm -rf`
+
 ## 执行命令
 
 ### [![1. git-js 快速执行git命令](https://img.shields.io/github/stars/steveukx/git-js?label=git-js&style=social)](https://github.com/steveukx/git-js)

@@ -3,9 +3,10 @@ module.exports = [
     "type": "category",
     "label": "知识点",
     "items": [
+      "node/basic/nodeErrorHandle",
       "node/nodeKnowledge",
-      "node/nodeRunShell",
-      "node/goodShell",
+      // "node/nodeRunShell",
+      // "node/goodShell",
       "node/nodeStreams",
       "node/basic/nodeES6",
       "node/basic/nodePackageEntry"
