@@ -9,5 +9,13 @@ module.exports = [
       "react/goods/reactBest"
     ],
     "collapsed": false
+  },
+  {
+    "type": "category",
+    "label": "插件",
+    "items": [
+      "react/plugins/reactUsefulPlugin"
+    ],
+    "collapsed": false
   }
 ]
