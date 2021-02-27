@@ -3,6 +3,7 @@ module.exports = [
     "type": "category",
     "label": "知识点",
     "items": [
+      "node/basic/nodeModuleAlias",
       "node/basic/nodeErrorHandle",
       "node/nodeKnowledge",
       // "node/nodeRunShell",
