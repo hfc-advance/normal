@@ -3,8 +3,8 @@ const path = require('path')
 
 async function compile() {
    publish({
-      id: 'LTAIc55pn1DsRBue',
-      secret: 'HjSUVA7b0JVBIkBRDpfT7vMmpFaCTG',
+      id: '',
+      secret: '',
       region: 'oss-cn-beijing',
       bucket: 'eagle-ui',
       entry: path.resolve(__dirname, '..', 'build'), // defaults to '.'
