@@ -346,3 +346,23 @@ const pipeline = promisify(stream.pipeline);
 	);
 })();
 ```
+
+### [![2. detect-port 检测端口是否被占用](https://img.shields.io/github/stars/node-modules/detect-port?label=detect-port&style=social)](https://github.com/node-modules/detect-port)
+
+检测端口是否被占用。
+
+```javascript
+const detect = require('detect-port');
+
+detect(port, (err, _port) => {
+  if (err) {
+    console.log(err);
+  }
+
+  if (port == _port) {
+    console.log(`port: ${port} was not occupied`);
+  } else {
+    console.log(`port: ${port} was occupied, try port: ${_port}`);
+  }
+});
+```
