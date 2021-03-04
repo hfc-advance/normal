@@ -12,6 +12,14 @@ module.exports = [
   },
   {
     "type": "category",
+    "label": "react-typescript",
+    "items": [
+      "react/typescript/reactTypescriptBase"
+    ],
+    "collapsed": false
+  },
+  {
+    "type": "category",
     "label": "插件",
     "items": [
       "react/plugins/reactUsefulPlugin"
