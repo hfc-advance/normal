@@ -19,6 +19,14 @@ module.exports = [
   },
   {
     "type": "category",
+    "label": "chrome",
+    "items": [
+      "other/chrome/chromeSearchSkill"
+    ],
+    "collapsed": false
+  },
+  {
+    "type": "category",
     "label": "mac",
     "items": [
       "other/mac/macShortcurKey",
