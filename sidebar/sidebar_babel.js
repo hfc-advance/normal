@@ -14,6 +14,12 @@ module.exports = [
   },
   {
     type: 'category',
+    label: 'git',
+    collapsed: false,
+    items: ['enginee/git/gitNotify'],
+  },
+  {
+    type: 'category',
     label: 'typescript',
     collapsed: false,
     items: ['enginee/typescript/typescriptBseconfig'],
