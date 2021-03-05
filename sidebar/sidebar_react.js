@@ -12,6 +12,14 @@ module.exports = [
   },
   {
     "type": "category",
+    "label": "注意事项",
+    "items": [
+      "react/notice/reactNoticeUseEffect"
+    ],
+    "collapsed": false
+  },
+  {
+    "type": "category",
     "label": "react-typescript",
     "items": [
       "react/typescript/reactTypescriptBase"
