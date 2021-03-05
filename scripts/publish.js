@@ -1,10 +1,11 @@
 const publish = require('ali-oss-publish')
 const path = require('path')
+const config = require('./config.js')
 
 async function compile() {
    publish({
-      id: '',
-      secret: '',
+      id: config.id,
+      secret: config.secret,
       region: 'oss-cn-beijing',
       bucket: 'eagle-ui',
       entry: path.resolve(__dirname, '..', 'build'), // defaults to '.'
