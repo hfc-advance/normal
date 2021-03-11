@@ -1,7 +1,7 @@
 module.exports = [
   {
     type: 'category', label: '',
-    items: ['enginee/enginee/getEngineeConfigFile'],
+    items: ['enginee/findConfig/getEngineeConfigFile'],
     collapsed: false
   },
   { type: 'category', label: 'Babel', items: ['enginee/babel/babel', 'enginee/babel/babelPlugins', 'enginee/babel/babelVersions', 'enginee/babel/babelPluginAna', 'enginee/babel/babelBase'], collapsed: false },
@@ -52,6 +52,12 @@ module.exports = [
     label: 'stylus',
     collapsed: false,
     items: ['enginee/stylus/stylusUsefulPlugin'],
+  },
+  {
+    type: 'category',
+    label: 'eslint',
+    collapsed: false,
+    items: ['enginee/eslint/eslintPlugin'],
   },
   {
     type: 'category',
