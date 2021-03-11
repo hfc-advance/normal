@@ -57,7 +57,7 @@ module.exports = [
     type: 'category',
     label: 'eslint',
     collapsed: false,
-    items: ['enginee/eslint/eslintPlugin'],
+    items: ['enginee/eslint/eslintPlugins'],
   },
   {
     type: 'category',
