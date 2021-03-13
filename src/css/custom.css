@@ -1459,3 +1459,6 @@ h4.method-list-item-label .method-list-item-validation {
 .admonition h5 {
   text-transform: none !important;
 }
+.token-line.docusaurus-highlight-code-line {
+  border-left: 0.35em solid #ffa7c4;
+}

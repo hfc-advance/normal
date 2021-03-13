@@ -12,6 +12,14 @@ module.exports = [
   },
   {
     "type": "category",
+    "label": "性能优化",
+    "items": [
+      "react/performance/reactPerformanceManyTimesRender"
+    ],
+    "collapsed": false
+  },
+  {
+    "type": "category",
     "label": "注意事项",
     "items": [
       "react/notice/reactNoticeUseEffect"
