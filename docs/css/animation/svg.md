@@ -80,29 +80,31 @@ stroke-dasharray = '20, 10, 5'
 
 ```jsx live
 function createItem () {
-  const createdStyleTag = document.createElement("style");
-  createdStyleTag.textContent = `@keyframes strokeLine {
-        0% {
-          stroke-dashoffset: 300;
+  if (typeof document !== 'undefined') {
+    const createdStyleTag = document.createElement("style");
+    createdStyleTag.textContent = `@keyframes strokeLine {
+          0% {
+            stroke-dashoffset: 300;
+          }
+          100% {
+            stroke-dashoffset: 0;
+          }
         }
-        100% {
-          stroke-dashoffset: 0;
+        @-webkit-keyframes strokeLine {
+          0% {
+            stroke-dashoffset: 300;
+          }
+          100% {
+            stroke-dashoffset: 0;
+          }
         }
-      }
-      @-webkit-keyframes strokeLine {
-        0% {
-          stroke-dashoffset: 300;
+        .stroke-line-example {
+          animation: strokeLine 1.6s infinite;
         }
-        100% {
-          stroke-dashoffset: 0;
-        }
-      }
-      .stroke-line-example {
-        animation: strokeLine 1.6s infinite;
-      }
-      `
+        `
 
-  document.body.appendChild(createdStyleTag);
+    document.body.appendChild(createdStyleTag);
+  }
 
 
   return (
@@ -119,28 +121,30 @@ function createItem () {
 
 ```jsx live
 function createItem () {
-  const createdStyleTag = document.createElement("style");
-  createdStyleTag.textContent = `@keyframes strokeCircle {
-        0% {
-          stroke-dashoffset: 314;
+  if (typeof document !== 'undefined') {
+    const createdStyleTag = document.createElement("style");
+    createdStyleTag.textContent = `@keyframes strokeCircle {
+          0% {
+            stroke-dashoffset: 314;
+          }
+          100% {
+            stroke-dashoffset: 0;
+          }
         }
-        100% {
-          stroke-dashoffset: 0;
+        @-webkit-keyframes strokeCircle {
+          0% {
+            stroke-dashoffset: 314;
+          }
+          100% {
+            stroke-dashoffset: 0;
+          }
         }
-      }
-      @-webkit-keyframes strokeCircle {
-        0% {
-          stroke-dashoffset: 314;
+        .stroke-circle-example {
+          animation: strokeCircle 1.6s infinite;
         }
-        100% {
-          stroke-dashoffset: 0;
-        }
-      }
-      .stroke-circle-example {
-        animation: strokeCircle 1.6s infinite;
-      }
-      `
-  document.body.appendChild(createdStyleTag);
+        `
+    document.body.appendChild(createdStyleTag);
+  }
 
   return (
     <svg  width="200" height="200" viewBox="0 0 200 200">

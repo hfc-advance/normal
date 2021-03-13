@@ -11,37 +11,39 @@ sidebar_label: steps
 
 ```jsx live
 function createItem () {
-  const createdStyleTag = document.createElement("style");
-  createdStyleTag.textContent = ` .contain {
-      width: 100px;
-      height: 100px;
-      border: 2px solid darkgray;
-      border-radius: 50%;
-    }
-    .child {
-      width: 6px;
-      height: 50px;
-      margin-left: 47px;
-      background-color: red;
-      transform-origin: bottom center;
-      animation: rotateTimer 15s infinite;
-    }
-    .child-steps {
-      animation: rotateTimer 30s infinite steps(60);
-    }
-
-    @keyframes rotateTimer {
-      to {
-        transform: rotate(360deg);
+  if (typeof document !== 'undefined') {
+    const createdStyleTag = document.createElement("style");
+    createdStyleTag.textContent = ` .contain {
+        width: 100px;
+        height: 100px;
+        border: 2px solid darkgray;
+        border-radius: 50%;
       }
-    }
-
-    @-webkit-keyframes rotateTimer {
-      to {
-        transform: rotate(360deg);
+      .child {
+        width: 6px;
+        height: 50px;
+        margin-left: 47px;
+        background-color: red;
+        transform-origin: bottom center;
+        animation: rotateTimer 15s infinite;
       }
-    }`
-  document.body.appendChild(createdStyleTag);
+      .child-steps {
+        animation: rotateTimer 30s infinite steps(60);
+      }
+
+      @keyframes rotateTimer {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @-webkit-keyframes rotateTimer {
+        to {
+          transform: rotate(360deg);
+        }
+      }`
+    document.body.appendChild(createdStyleTag);
+  }
 
   return (
     <div style={{display: 'flex'}}>
@@ -132,41 +134,43 @@ function createItem () {
 
     ```jsx live
     function createItem () {
-      const createdStyleTag = document.createElement("style");
-      createdStyleTag.textContent = `.item1 {
-          width: 100px;
-          height: 100px;
-          background-color: aquamarine;
-          animation: rotateBox 1s infinite;
-        }
-
-        @keyframes rotateBox {
-          0% {
-            transform: translateX(0);
+      if (typeof document !== 'undefined') {
+        const createdStyleTag = document.createElement("style");
+        createdStyleTag.textContent = `.item1 {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            animation: rotateBox 1s infinite;
           }
 
-          50% {
-            transform: translateX(150px);
-          }
+          @keyframes rotateBox {
+            0% {
+              transform: translateX(0);
+            }
 
-          100% {
-            transform: translateX(300px);
-          }
-        }
-        @-webkit-keyframes rotateBox {
-          0% {
-            transform: translateX(0);
-          }
+            50% {
+              transform: translateX(150px);
+            }
 
-          50% {
-            transform: translateX(150px);
+            100% {
+              transform: translateX(300px);
+            }
           }
+          @-webkit-keyframes rotateBox {
+            0% {
+              transform: translateX(0);
+            }
 
-          100% {
-            transform: translateX(300px);
-          }
-        }`
-      document.body.appendChild(createdStyleTag);
+            50% {
+              transform: translateX(150px);
+            }
+
+            100% {
+              transform: translateX(300px);
+            }
+          }`
+        document.body.appendChild(createdStyleTag);
+      }
 
       return (
         <div className="item1"></div>
