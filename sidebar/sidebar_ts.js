@@ -8,7 +8,8 @@ module.exports = [
       "ts/goods/tsConfig",
       "ts/goods/tsAdvanceType",
       "ts/goods/tsClass",
-      "ts/goods/tsUnknownType"
+      "ts/goods/tsUnknownType",
+      "ts/goods/tsNeverType"
     ],
     "collapsed": false
   },
