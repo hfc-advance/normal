@@ -14,7 +14,7 @@ module.exports = [
     "type": "category",
     "label": "高级",
     "items": [
-      "react/advance/ReactElementObject"
+      "react/advance/reactElementObject"
     ],
     "collapsed": false
   },
