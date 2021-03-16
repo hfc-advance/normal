@@ -210,6 +210,33 @@ config.set('unicorn', '🦄');
 
 跨平台 `rm -rf`
 
+### [![6. magic-string 快速处理字符串以及生成map](https://img.shields.io/github/stars/Rich-Harris/magic-string?label=magic-string&style=social)](https://github.com/Rich-Harris/magic-string)
+
+很方便的处理字符串以及生成 `map`
+
+```javascript
+var MagicString = require( 'magic-string' );
+var s = new MagicString( 'problems = 99' );
+
+s.overwrite( 0, 8, 'answer' );
+s.toString(); // 'answer = 99'
+
+s.overwrite( 11, 13, '42' ); // character indices always refer to the original string
+s.toString(); // 'answer = 42'
+
+s.prepend( 'var ' ).append( ';' ); // most methods are chainable
+s.toString(); // 'var answer = 42;'
+
+var map = s.generateMap({
+  source: 'source.js',
+  file: 'converted.js.map',
+  includeContent: true
+}); // generates a v3 sourcemap
+
+require( 'fs' ).writeFile( 'converted.js', s.toString() );
+require( 'fs' ).writeFile( 'converted.js.map', map.toString() );
+```
+
 ## 执行命令
 
 ### [![1. git-js 快速执行git命令](https://img.shields.io/github/stars/steveukx/git-js?label=git-js&style=social)](https://github.com/steveukx/git-js)
