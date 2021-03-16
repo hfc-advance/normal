@@ -12,6 +12,14 @@ module.exports = [
   },
   {
     "type": "category",
+    "label": "高级",
+    "items": [
+      "react/advance/ReactElementObject"
+    ],
+    "collapsed": false
+  },
+  {
+    "type": "category",
     "label": "性能优化",
     "items": [
       "react/performance/reactPerformanceManyTimesRender"
