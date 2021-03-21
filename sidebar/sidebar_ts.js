@@ -9,7 +9,8 @@ module.exports = [
       "ts/goods/tsAdvanceType",
       "ts/goods/tsClass",
       "ts/goods/tsUnknownType",
-      "ts/goods/tsNeverType"
+      "ts/goods/tsNeverType",
+      "ts/goods/tsSupportCommonJs"
     ],
     "collapsed": false
   },
