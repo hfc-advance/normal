@@ -5,7 +5,7 @@
   "scripts": {
     "start": "docusaurus start",
     "build": "docusaurus build",
-    "publish": "npm run build && node scripts/publish.js"
+    "commit": "npm run build && node scripts/commit.js"
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-alpha.63",
@@ -38,6 +38,8 @@
     "axios": "^0.19.2",
     "babel-plugin-css-modules-transform": "^1.6.2",
     "clsx": "^1.1.1",
+    "del": "^5.1.0",
+    "execa": "^1.0.0",
     "fs-extra": "^8.1.0",
     "js-yaml": "^3.14.0",
     "minimist": "^1.2.5",
