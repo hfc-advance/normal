@@ -24,6 +24,11 @@ async function commit () {
     ['push'],
     { stdio: 'inherit', cwd: gitCWD }
   )
+  await execa(
+    'git',
+    ['commit'],
+    { stdio: 'inherit', cwd: gitCWD }
+  )
 }
 
 commit()
