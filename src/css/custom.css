@@ -1462,3 +1462,6 @@ h4.method-list-item-label .method-list-item-validation {
 .token-line.docusaurus-highlight-code-line {
   border-left: 0.35em solid #ffa7c4;
 }
+video {
+  width: 100%;
+}
