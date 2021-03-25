@@ -16,6 +16,7 @@ const gooddoc = require('./sidebar/sidebar_good.js')
 const gitdoc = require('./sidebar/sidebar_git.js')
 const tooldoc = require('./sidebar/sidebar_tool.js')
 const otherdoc = require('./sidebar/sidebar_other.js')
+const performancedoc = require('./sidebar/sidebar_performance.js')
 
 module.exports = {
   babeldoc,
@@ -29,5 +30,6 @@ module.exports = {
   gooddoc,
   gitdoc,
   tooldoc,
-  otherdoc
+  otherdoc,
+  performancedoc
 }

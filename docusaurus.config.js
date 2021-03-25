@@ -129,6 +129,12 @@ module.exports = {
           activeBasePath: '/docs/other/cookies/cookiesBaseAttr',
           to: '/docs/other/cookies/cookiesBaseAttr',
           position: 'left',
+        },
+        {
+          label: '性能优化',
+          activeBasePath: '/docs/performance/performanceJSplit',
+          to: '/docs/performance/performanceJSplit',
+          position: 'left',
         }
         /* 一级菜单下拉例子 */
         // {
