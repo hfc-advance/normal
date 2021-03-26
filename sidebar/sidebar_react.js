@@ -14,6 +14,16 @@ module.exports = [
   },
   {
     "type": "category",
+    "label": "styled-components",
+    "items": [
+      "react/styledComponents/reactStyledComponentsDocument",
+      "react/styledComponents/reactStyledComponentsTypescript",
+      "react/styledComponents/reactStyledComponentsSkill"
+    ],
+    "collapsed": false
+  },
+  {
+    "type": "category",
     "label": "高级",
     "items": [
       "react/advance/reactElementObject"
