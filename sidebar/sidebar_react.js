@@ -7,7 +7,8 @@ module.exports = [
       "react/goods/reactType",
       "react/goods/reactHook",
       "react/goods/reactBest",
-      "react/goods/reactCleanCode"
+      "react/goods/reactCleanCode",
+      "react/goods/reactDirectory"
     ],
     "collapsed": false
   },
