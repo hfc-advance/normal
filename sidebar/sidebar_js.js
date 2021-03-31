@@ -3,7 +3,9 @@ module.exports =
   {
     type: 'category',
     label: '干货',
-    items: ['js/goods/jsDecorator', 'js/goods/jsCustomPlugin', 'js/goods/unKnow', 'js/goods/jsObject', 'js/goods/jsBlob', 'js/goods/jsArray', 'js/goods/jsPromise', 'js/goods/jsProxy'],
+    items: [
+      'js/goods/jsObjectCompare',
+      'js/goods/jsDecorator', 'js/goods/jsCustomPlugin', 'js/goods/unKnow', 'js/goods/jsObject', 'js/goods/jsBlob', 'js/goods/jsArray', 'js/goods/jsPromise', 'js/goods/jsProxy'],
     collapsed: false,
   },
   {
