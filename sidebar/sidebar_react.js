@@ -3,12 +3,14 @@ module.exports = [
     "type": "category",
     "label": "干货",
     "items": [
+      "react/goods/reactBase",
       "react/goods/reactGoods1",
       "react/goods/reactType",
       "react/goods/reactHook",
       "react/goods/reactBest",
       "react/goods/reactCleanCode",
-      "react/goods/reactDirectory"
+      "react/goods/reactDirectory",
+      "react/goods/reactShallowCompare"
     ],
     "collapsed": false
   },
