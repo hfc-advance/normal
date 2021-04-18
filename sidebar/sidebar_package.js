@@ -25,7 +25,8 @@ module.exports = [
       "package/node/nodePerformancePkg",
       "package/node/nodeToolPkg",
       "package/node/nodeToolPkg1",
-      "package/node/nodeToolCli"
+      "package/node/nodeToolCli",
+      "package/node/nodeProjectHelper"
     ],
     "collapsed": false
   },
