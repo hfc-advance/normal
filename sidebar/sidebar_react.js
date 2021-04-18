@@ -37,7 +37,8 @@ module.exports = [
     "type": "category",
     "label": "性能优化",
     "items": [
-      "react/performance/reactPerformanceManyTimesRender"
+      "react/performance/reactPerformanceManyTimesRender",
+      "react/performance/reactBatchUpdate"
     ],
     "collapsed": false
   },
