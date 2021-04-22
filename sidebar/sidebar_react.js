@@ -20,7 +20,8 @@ module.exports = [
     "items": [
       "react/styledComponents/reactStyledComponentsDocument",
       "react/styledComponents/reactStyledComponentsTypescript",
-      "react/styledComponents/reactStyledComponentsSkill"
+      "react/styledComponents/reactStyledComponentsSkill",
+      "react/styledComponents/reactStyledComponentsTheory"
     ],
     "collapsed": false
   },
