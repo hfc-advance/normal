@@ -355,3 +355,48 @@ function loggingIdentity<T extends ILengthwise>(arg: T): T {
 :::tip
 约束某个类型必须是继承某个类型，可以用来添加约束
 :::
+
+## 6. 限制关联类型
+
+![limit-ts-type](../../../static/img/61298108-35f98980-a810-11e9-8415-d8e9f1f07533.png)
+
+我们期待有下面这样的静态检查。 而不是运行的时候告诉我 `Luxy` 并不是一个有效的默认值。
+
+```tsx
+// 这一个不会报错
+<Select set={["Jack", "Lucy", "yiminghe"]} defaultValue={"Lucy"} />
+
+// 这一个会报错。因为不是lucy，而是luxy
+<Select set={["Jack", "Lucy", "yiminghe"]} defaultValue={"Luxy"} />
+```
+
+### 实现
+
+```tsx
+function Select<T extends V[], V extends string>(prop: {list: T, defaultValue: T[number]}) {
+  return <>{prop.list.map(item => (<div key={item}>{item}{prop.defaultValue}</div>))}</>
+}
+```
+
+:::important 收获
+
+- 关于数组类型采用 `Array[number]`，可以动态获取数组的所有元素。
+
+  ```ts
+  const arr = [1, 2, 3] as const
+
+  type TArr = (typeof arr)[number] // 1, 2, 3
+  ```
+
+- 数组类型继续拆分泛型，能够直接拿到原数据，其实也是利用了 `自动推导` 的能力
+
+  ```tsx {1}
+  function Select<T extends V[], V extends string>(prop: {list: T, defaultValue: T[number]}) {
+    return <>{prop.list.map(item => (<div key={item}>{item}{prop.defaultValue}</div>))}</>
+  }
+
+  // T extends V[] 这种方式 T[number] 拿到的是原数据
+  // T extends string[] 这种方式 T[number] 拿到的是string
+  ```
+
+:::
