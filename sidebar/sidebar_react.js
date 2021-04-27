@@ -18,7 +18,6 @@ module.exports = [
     "type": "category",
     "label": "styled-components",
     "items": [
-      "react/styledComponents/reactStyledComponentsDocument",
       "react/styledComponents/reactStyledComponentsTypescript",
       "react/styledComponents/reactStyledComponentsSkill",
       "react/styledComponents/reactStyledComponentsTheory"
