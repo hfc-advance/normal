@@ -29,7 +29,8 @@ module.exports = [
     "label": "高级",
     "items": [
       "react/advance/reactElementObject",
-      "react/advance/reactCombineEvent"
+      "react/advance/reactCombineEvent",
+      "react/advance/reactHOC"
     ],
     "collapsed": false
   },
