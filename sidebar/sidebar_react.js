@@ -30,7 +30,8 @@ module.exports = [
     "items": [
       "react/advance/reactElementObject",
       "react/advance/reactCombineEvent",
-      "react/advance/reactHOC"
+      "react/advance/reactHOC",
+      "react/advance/reactRenderProp"
     ],
     "collapsed": false
   },
