@@ -40,7 +40,8 @@ module.exports = [
     "label": "性能优化",
     "items": [
       "react/performance/reactPerformanceManyTimesRender",
-      "react/performance/reactBatchUpdate"
+      "react/performance/reactBatchUpdate",
+      "react/performance/reactBailout"
     ],
     "collapsed": false
   },
