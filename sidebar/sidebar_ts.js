@@ -3,6 +3,7 @@ module.exports = [
     "type": "category",
     "label": "干货",
     "items": [
+      "ts/goods/tsSkill",
       "ts/goods/tsLoop",
       "ts/goods/tsGoods2",
       "ts/goods/tsGoods1",
