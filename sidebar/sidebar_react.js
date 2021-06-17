@@ -68,5 +68,13 @@ module.exports = [
       "react/plugins/reactUsefulPlugin"
     ],
     "collapsed": false
+  },
+  {
+    "type": "category",
+    "label": "recoil",
+    "items": [
+      "react/recoil/reactRecoilBase"
+    ],
+    "collapsed": false
   }
 ]
