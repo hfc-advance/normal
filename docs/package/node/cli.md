@@ -393,3 +393,33 @@ detect(port, (err, _port) => {
   }
 });
 ```
+
+### [![3. wait-on 等待文件,端口,socket可用](https://img.shields.io/github/stars/jeffbski/wait-on?label=wait-on&style=social)](https://github.com/jeffbski/wait-on)
+
+等待 `文件`;`端口`;`socket` 可用
+
+```js
+waitOn(opts, function (err) {
+  if (err) {
+    return handleError(err);
+  }
+  // once here, all resources are available
+});
+
+// Usage with promises
+waitOn(opts)
+  .then(function () {
+    // once here, all resources are available
+  })
+  .catch(function (err) {
+    handleError(err);
+  });
+
+// Usage with async await
+try {
+  await waitOn(opts);
+  // once here, all resources are available
+} catch (err) {
+  handleError(err);
+}
+```
