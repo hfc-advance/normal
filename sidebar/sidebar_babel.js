@@ -4,7 +4,7 @@ module.exports = [
     items: ['enginee/findConfig/getEngineeConfigFile'],
     collapsed: false
   },
-  { type: 'category', label: 'Babel', items: ['enginee/babel/babel', 'enginee/babel/babelPlugins', 'enginee/babel/babelVersions', 'enginee/babel/babelPluginAna', 'enginee/babel/babelBase'], collapsed: false },
+  { type: 'category', label: 'Babel', items: ['enginee/babel/babel', 'enginee/babel/babelPlugins', 'enginee/babel/babelVersions', 'enginee/babel/babelPluginAna', 'enginee/babel/babelBase', 'enginee/babel/babelMacros'], collapsed: false },
   {
     type: 'category',
     label: 'webpack',
