@@ -346,6 +346,31 @@ console.log(table.toString());
 
 ![cli-table](../../../static/img/687474703a2f2f692e696d6775722e636f6d2f73597134542e706e67.png)
 
+### [![6. cfonts 终端渲染各种好看的字体](https://img.shields.io/github/stars/dominikwilkowski/cfonts?label=cfonts&style=social)](https://github.com/dominikwilkowski/cfonts)
+
+终端渲染各种好看的字体
+
+```javascript
+const CFonts = require('cfonts');
+
+CFonts.say('Hello|world!', {
+	font: 'block',              // define the font face
+	align: 'left',              // define text alignment
+	colors: ['system'],         // define all colors
+	background: 'transparent',  // define the background color, you can also use `backgroundColor` here as key
+	letterSpacing: 1,           // define letter spacing
+	lineHeight: 1,              // define the line height
+	space: true,                // define if the output text should have empty lines on top and on the bottom
+	maxLength: '0',             // define how many character can be on one line
+	gradient: false,            // define your two gradient colors
+	independentGradient: false, // define if you want to recalculate the gradient for each new line
+	transitionGradient: false,  // define if this is a transition between colors directly
+	env: 'node'                 // define the environment CFonts is being executed in
+});
+```
+
+![cfonts](../../../static/img/cfonts.png)
+
 ## 服务器
 
 ### [![1. got 友好的http请求，文件上传下载](https://img.shields.io/github/stars/sindresorhus/got?label=got&style=social)](https://github.com/sindresorhus/got)
