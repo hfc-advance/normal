@@ -29,6 +29,7 @@ module.exports = [
     "type": "category",
     "label": "高级",
     "items": [
+      "react/advance/reactPassMessage",
       "react/advance/reactContext",
       "react/advance/reactUseReducer",
       "react/advance/reactElementObject",
