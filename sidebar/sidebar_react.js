@@ -27,6 +27,13 @@ module.exports = [
   },
   {
     "type": "category",
+    "label": "状态管理",
+    "items": [
+      "react/stateManager/reactIIFEStateManager"
+    ]
+  },
+  {
+    "type": "category",
     "label": "高级",
     "items": [
       "react/advance/reactPassMessage",
