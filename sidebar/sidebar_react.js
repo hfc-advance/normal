@@ -3,6 +3,7 @@ module.exports = [
     "type": "category",
     "label": "干货",
     "items": [
+      "react/goods/reactPersistedState",
       "react/goods/reactQuestionFix",
       "react/goods/reactBase",
       "react/goods/reactGoods1",
