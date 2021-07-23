@@ -5,7 +5,7 @@ hide_title: true
 sidebar_label: context
 ---
 
-## 1. 基础用法
+### 1. 基础用法
 
 ```jsx
 // 1. 创建一个context
@@ -26,7 +26,7 @@ function Child() {
 }
 ```
 
-## 2. 自定义 hook 封装 context
+### 2. 自定义 hook 封装 context
 
 为了方便使用时候的便利，可以将 `context` 封装到自定义 `hook` 中
 
@@ -67,7 +67,7 @@ function Item() {
 }
 ```
 
-## 3. 传送 setState，避免一层一层传递
+### 3. 传送 setState，避免一层一层传递
 
 ```jsx {3-6,13,19}
 const TodosDispatch = React.createContext(null);
@@ -120,3 +120,53 @@ function DeepTree() {
   ```
 
 :::
+
+### 4. 封装到单独文件
+
+```jsx {5,8,15,23}
+import React from 'react';
+
+const CurrencyContext = React.createContext(null);
+
+// 1. 暴露提取数据的hook
+const useCurrency = () => React.useContext(CurrencyContext);
+
+// 2. 高阶组件包裹一下，通过prop提取数据
+const withCurrency = (Component) => (props) => {
+  const currency = useCurrency();
+
+  return <Component {...props} currency={currency} />;
+};
+
+// 3. 直接暴露Provider
+const CurrencyProvider = ({ value, children }) => {
+  return (
+    <CurrencyContext.Provider value={value}>
+      {children}
+    </CurrencyContext.Provider>
+  );
+};
+// 4. 关联的常量数据
+const CURRENCIES = {
+  Euro: {
+    code: 'EUR',
+    label: 'Euro',
+    conversionRate: 1, // base conversion rate
+  },
+  Usd: {
+    code: 'USD',
+    label: 'US Dollar',
+    conversionRate: 1.19,
+  },
+};
+export { CurrencyProvider, useCurrency, withCurrency, CURRENCIES };
+```
+
+:::success
+`context` 关联的所有数据，都存放在一起
+:::
+
+## 参考
+
+- [How to useContext in React](https://www.robinwieruch.de/react-usecontext-hook)
+- [React Context Injection](https://www.robinwieruch.de/react-context-injection)
