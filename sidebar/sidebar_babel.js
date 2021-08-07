@@ -9,7 +9,7 @@ module.exports = [
     type: 'category',
     label: 'webpack',
     collapsed: false,
-    items: ['enginee/webpack/webpackModuleFederation', 'enginee/webpack/webpackAssetModule', 'enginee/webpack/webpack5Changelog', 'enginee/webpack/webpackOptimization', 'enginee/webpack/webpackImportantMethod', 'enginee/webpack/webpackOftenPkg', 'enginee/webpack/webpackFood', 'enginee/webpack/webpackComponentNotice', 'enginee/webpack/webpackPlugin', 'enginee/webpack/webpackUsefulPlugin'],
+    items: ['enginee/webpack/webpackTapable', 'enginee/webpack/webpackModuleFederation', 'enginee/webpack/webpackAssetModule', 'enginee/webpack/webpack5Changelog', 'enginee/webpack/webpackOptimization', 'enginee/webpack/webpackImportantMethod', 'enginee/webpack/webpackOftenPkg', 'enginee/webpack/webpackFood', 'enginee/webpack/webpackComponentNotice', 'enginee/webpack/webpackPlugin', 'enginee/webpack/webpackUsefulPlugin'],
   },
   {
     type: 'category',
