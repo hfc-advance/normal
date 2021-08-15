@@ -10,6 +10,8 @@ sidebar_label: tapable
 - `tapable` 控制一系列注册事件之间的执行流机制，可以理解为高阶版的 `event`.
 - 分为 `同步` 和 `异步`，然后 `异步` 里面又分为 `串行` 和 `并行`，当然 `同步` 的只能是 `串行`.
 
+![Tapable](../../../static/img/Tapable.png)
+
 ## sync 同步类型
 
 ### 1. SyncHook 钩子
