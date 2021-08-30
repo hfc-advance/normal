@@ -16,3 +16,12 @@ sidebar_label: webpack 常用操作
   ```
 
 :::
+
+### 2. 判断是否使用了某个插件
+
+```javascript {3}
+function hasExtractTextPlugin(compiler) {
+  const plugins = compiler.options.plugins;
+  return plugins.find(plugin=>plugin.__proto__.constructor === ExtractTextPlugin) != null;
+}
+```
