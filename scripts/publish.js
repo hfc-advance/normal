@@ -6,8 +6,8 @@ async function compile() {
    publish({
       id: config.id,
       secret: config.secret,
-      region: 'oss-cn-beijing',
-      bucket: 'eagle-ui',
+      region: 'oss-cn-shanghai',
+      bucket: 'hfcui-site',
       entry: path.resolve(__dirname, '..', 'build'), // defaults to '.'
       headers: {
         'Cache-Control': 'max-age=30672000',
