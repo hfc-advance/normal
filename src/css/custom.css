@@ -19,7 +19,7 @@
   margin: 0;
 }
 .warning code {
-  background-color: rgba(255,255,255,0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   color: #445368;
 }
 .warning p {
@@ -37,7 +37,7 @@
 }
 .tip code,
 .success code {
-  background-color: rgba(255,255,255,0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   color: #445368;
 }
 .tip p,
@@ -60,7 +60,7 @@
   align-items: center;
 }
 .bg-f {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 img[src$='#max-height'] {
   max-height: 500px;

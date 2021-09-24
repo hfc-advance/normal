@@ -13,17 +13,13 @@ $layout: (
 
     div[class^="docPage_"] {
       flex-wrap: wrap;
-      max-width: map-get-strict($layout, main-wrapper);
       padding: 0 map-get-strict($layout, main-wrapper-gutter);
       margin: 0 auto;
     }
 
     main[class^="docMainContainer_"] {
-      @include flex-grid-width(12);
-
-      @include media(desktop up) {
-        @include flex-grid-width(9);
-      }
+      flex: 0 0 85%;
+      max-width: 85%;
     }
 
     main[class^="docItemContainer_"] {
@@ -35,7 +31,8 @@ $layout: (
 
       @include media(tablet up) {
         display: block;
-        @include flex-grid-width(3);
+        max-width: 25%;
+        flex: 0 0 15%;
       }
     }
 
@@ -60,18 +57,18 @@ $layout: (
 
     .row {
       margin: 0;
-  
+
       .col {
         @include flex-grid-width(12);
         padding: 0;
 
         @include media(desktop up) {
           @include flex-grid-width(9);
-          padding: 0 map-get-strict($layout, main-wrapper-gutter);
+          padding: 0 22px;
         }
-  
+
         @include media(large up) {
-          padding: 0 80px;
+          padding: 0 22px;
         }
 
         &.col--3 {

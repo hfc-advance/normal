@@ -255,7 +255,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [
-            require('remark-admonitions')
+            require('remark-admonitions/styles/classic.css')
           ]
         },
         theme: {

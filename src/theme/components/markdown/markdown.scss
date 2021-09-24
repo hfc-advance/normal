@@ -1,3 +1,5 @@
+@import '~prism-themes/themes/prism-atom-dark.css';
+
 $markdown: (
   p: (
     mobile: (
@@ -30,10 +32,9 @@ $markdown: (
   li: (
     mobile: (
       padding: 5px 0,
-      font-size: 16px,
+      font-size: 14px,
       font-weight: 500,
       line-height: 1.7,
-      color: $base-cape-color,
     ),
   ),
   strong: (
@@ -61,6 +62,7 @@ $markdown: (
     mobile: (
       font-size: 14px,
       font-weight: 500,
+      line-height: 1.6,
       font-family: $base-block-family-code,
     ),
   ),
@@ -101,5 +103,8 @@ $markdown: (
 
   .token-line {
     @include responsive($markdown, token-line);
+  }
+  .token.class-name {
+    text-decoration: none !important;
   }
 }
