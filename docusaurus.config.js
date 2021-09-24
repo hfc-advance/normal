@@ -8,6 +8,9 @@ module.exports = {
   title: 'advance',
   tagline: 'The open source Firebase alternative.',
   url: 'https://hfcui.com',
+  clientModules: [
+    require.resolve('./role.js')
+  ],
   baseUrl: '/',
   favicon: '/favicon.ico',
   organizationName: 'supabase', // Usually your GitHub org/user name.
