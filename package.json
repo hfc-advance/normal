@@ -6,7 +6,7 @@
     "dev": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "commit": "npm run build && node scripts/commit.js"
+    "publish": "node scripts/publish.js"
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-alpha.63",

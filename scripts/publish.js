@@ -13,7 +13,7 @@ async function compile() {
         'Cache-Control': 'max-age=30672000',
         'Access-Control-Allow-Origin': '*'
       },
-      output: ''
+      output: 'personal-site/'
     }, (err, stats) => {
       if (err) {
         console.error('ali-oss-publish encountered a fatal error.')
