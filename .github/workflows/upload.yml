@@ -25,6 +25,11 @@ jobs:
     - name: compile source code
       run: npm run build
 
-    - name: publish
-      run: |
-        npm run publish
+    - name: upload files to OSS
+      uses: fangbinwei/aliyun-oss-website-action@v1
+      with:
+          accessKeyId: ${{ secrets.ACCESS_KEY_ID }}
+          accessKeySecret: ${{ secrets.ACCESS_KEY_SECRET }}
+          bucket: hfcui-site
+          endpoint: oss-cn-shanghai.aliyuncs.com
+          folder: build
