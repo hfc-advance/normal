@@ -14,34 +14,13 @@ module.exports = {
   projectName: 'supabase', // Usually your repo name.
   onBrokenLinks: 'ignore',
   themeConfig: {
-    forceDarkMode: true,
-    darkMode: true,
     colorMode: {
-      // "light" | "dark"
-      defaultMode: 'dark',
-
+      respectPrefersColorScheme: false,
+      defaultMode: 'light',
       // Hides the switch in the navbar
       // Useful if you want to support a single color mode
-      disableSwitch: false,
-
-      // Should we use the prefers-color-scheme media-query,
-      // using user system preferences, instead of the hardcoded defaultMode
-      respectPrefersColorScheme: false,
-
-      // Dark/light switch icon options
-      switchConfig: {
-        // Icon for the switch while in dark mode
-        darkIcon: '  ',
-        darkIconStyle: {
-          marginTop: '1px',
-        },
-        lightIcon: '  ',
-        lightIconStyle: {
-          marginTop: '1px',
-        },
-      },
+      disableSwitch: true
     },
-    sidebarCollapsible: false,
     algolia: {
       apiKey: '766d56f13dd1e82f43253559b7c86636',
       indexName: 'supabase',
@@ -180,10 +159,9 @@ module.exports = {
       ],
     },
     prism: {
-      defaultLanguage: 'js',
-      plugins: ['line-numbers', 'show-language'],
-      theme: require('@kiwicopple/prism-react-renderer/themes/vsDark'),
-      darkTheme: require('@kiwicopple/prism-react-renderer/themes/palenight'),
+      plugins: ['line-numbers'],
+      theme: require('prism-react-renderer/themes/dracula'),
+      additionalLanguages: ['php'],
     },
     // footer: {
     //   links: [
@@ -278,10 +256,11 @@ module.exports = {
           ]
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: [require.resolve('./src/scss/application.scss'), require.resolve('./src/css/custom.css')]
         }
       },
     ],
   ],
+  plugins: ['docusaurus-plugin-sass'],
   themes: ['@docusaurus/theme-live-codeblock']
 }

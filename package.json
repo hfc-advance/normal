@@ -3,20 +3,25 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "docusaurus start",
+    "dev": "docusaurus start",
     "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
     "commit": "npm run build && node scripts/commit.js"
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-alpha.63",
     "@docusaurus/preset-classic": "^2.0.0-alpha.63",
+    "@eightshift/frontend-libs": "^5.0.2",
     "@kiwicopple/prism-react-renderer": "github:kiwicopple/prism-react-renderer",
     "classnames": "^2.2.6",
+    "docsearch.js": "^2.6.3",
+    "docusaurus-plugin-sass": "^0.2.1",
     "mermaid": "^8.6.4",
     "prism-themes": "^1.5.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-inlinesvg": "^2.0.1",
+    "react-scripts": "^4.0.3",
     "remark-admonitions": "^1.2.1"
   },
   "browserslist": {
