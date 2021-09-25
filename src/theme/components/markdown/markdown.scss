@@ -3,7 +3,7 @@
 $markdown: (
   p: (
     mobile: (
-      font-size: 16px,
+      font-size: 14px,
       font-weight: 500,
       line-height: 1.7,
       color: $base-cape-color,
@@ -47,7 +47,7 @@ $markdown: (
     mobile: (
       background-color: $base-egg-color,
       border-color: $base-mandy-color,
-      font-size: 16px,
+      font-size: 14px,
       font-weight: 500,
       line-height: 1.7,
       color: $base-cape-color,
@@ -79,8 +79,9 @@ $markdown: (
 
   p {
     line-height: 1.9 !important;
+    font-size: 14px;
   }
-  
+
   a {
     @include link($markdown, a);
   }
