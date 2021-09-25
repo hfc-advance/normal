@@ -71,9 +71,16 @@ $markdown: (
 
 .markdown {
   > p {
-    @include responsive($markdown, p);
+    margin: 0 0 11px;
+    + p {
+      margin: 0;
+    }
   }
 
+  p {
+    line-height: 1.9 !important;
+  }
+  
   a {
     @include link($markdown, a);
   }

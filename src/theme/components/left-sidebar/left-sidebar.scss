@@ -34,15 +34,15 @@ $menu: (
   ),
   sublist: (
     mobile: (
-      font-size: 18px,
-      font-weight: bold,
-      color: $base-elephant-color,
+      font-size: 14px,
+      font-weight: 600,
+      color: #000,
       font-family: $base-font-family-alternative,
     ),
   ),
   sublist-sublist: (
     mobile: (
-      font-size: 14px,
+      font-size: 13px,
       font-weight: 500,
       line-height: 1.43,
       letter-spacing: 0.4px,
@@ -52,7 +52,7 @@ $menu: (
   ),
   list: (
     mobile: (
-      font-size: 14px,
+      font-size: 13px,
       font-weight: 500,
       line-height: 1.43,
       letter-spacing: 0.4px,

@@ -1,0 +1,9 @@
+{
+  "restartable": "rs",
+  "watch": [
+    "sidebar/"
+  ],
+  "verbose": true,
+  "delay": "1000",
+  "exec": "docusaurus start"
+}
