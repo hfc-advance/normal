@@ -15,8 +15,46 @@ $right-menu: (
 );
 
 #__docusaurus {
+  ul {
+    counter-reset: section;                /* 为每个ol元素创建新的计数器实例 */
+  }
+
+  li {
+    counter-increment: section;            /* 只增加计数器的当前实例 */
+  }
+
   .table-of-contents__left-border {
-    padding: 0 0 0 30px;
+    padding: 0 0 0 11px;
+    counter-reset: section;
+
+    > li {
+      counter-increment: section;
+
+      > a {
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        color: #000 !important;
+        position: relative;
+
+        &::before {
+          content: counters(section, ".") "、";
+        }
+
+      }
+      > ul {
+          margin-left: 11px;
+          position: relative;
+
+          a {
+            font-size: 13px !important;
+            position: relative;
+
+            &::before {
+              content: counters(section, ".") "、";
+            }
+          }
+      }
+    }
 
     ul {
       padding-left: 0;
@@ -28,7 +66,7 @@ $right-menu: (
       a {
         @include link($right-menu, link);
         &.table-of-contents__link--active {
-          color: $base-mandy-color;
+          color: $base-mandy-color !important;
           text-decoration: none;
         }
       }
