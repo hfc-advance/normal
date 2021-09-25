@@ -11,12 +11,13 @@ $markdown: (
   ),
   code: (
     mobile: (
-      background-color: $base-charade-color,
       font-family: $base-block-family-code,
       font-weight: 500,
-      font-size: 16px,
-      line-height: 1.5,
-      color: $base-white-color,
+      font-size: 14px,
+      padding-left: 3px,
+      padding-right: 3px,
+      background: rgb(189, 147, 249),
+      margin: 0 3px
     ),
   ),
   a: (
@@ -62,7 +63,7 @@ $markdown: (
     mobile: (
       font-size: 14px,
       font-weight: 500,
-      line-height: 1.6,
+      line-height: 1.9,
       font-family: $base-block-family-code,
     ),
   ),
