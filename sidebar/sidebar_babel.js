@@ -1,9 +1,15 @@
 module.exports = [
   {
-    type: 'category', label: '',
-    items: ['enginee/findConfig/getEngineeConfigFile'],
-    collapsed: true
+    type: 'category',
+    label: '工程配置项',
+    collapsed: true,
+    items: ['enginee/configItems/frontProjectConfigItems'],
   },
+  // {
+  //   type: 'category', label: '',
+  //   items: ['enginee/findConfig/getEngineeConfigFile'],
+  //   collapsed: true
+  // },
   { type: 'category', label: 'Babel', items: ['enginee/babel/babel', 'enginee/babel/babelPlugins', 'enginee/babel/babelVersions', 'enginee/babel/babelPluginAna', 'enginee/babel/babelBase', 'enginee/babel/babelMacros'], collapsed: true },
   {
     type: 'category',
@@ -40,12 +46,6 @@ module.exports = [
     label: 'prettier',
     collapsed: true,
     items: ['enginee/prettier/prettierPlugin'],
-  },
-  {
-    type: 'category',
-    label: '配置项',
-    collapsed: true,
-    items: ['enginee/projectConfigItem', 'enginee/projectUpdatePac'],
   },
   {
     type: 'category',
