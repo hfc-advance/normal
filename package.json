@@ -19,6 +19,7 @@
     "mermaid": "^8.6.4",
     "nodemon": "^2.0.13",
     "prism-themes": "^1.5.0",
+    "raw-loader": "^4.0.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-inlinesvg": "^2.0.1",

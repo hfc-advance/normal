@@ -5,36 +5,6 @@ hide_title: true
 sidebar_label: 配置文件应用规则
 ---
 
-:::note
-
-Some **content** with _markdown_ `syntax`. Check [this `api`](#).
-
-:::
-
-:::tip
-
-Some **content** with _markdown_ `syntax`. Check [this `api`](#).
-
-:::
-
-:::info
-
-Some **content** with _markdown_ `syntax`. Check [this `api`](#).
-
-:::
-
-:::caution
-
-Some **content** with _markdown_ `syntax`. Check [this `api`](#).
-
-:::
-
-:::danger
-
-Some **content** with _markdown_ `syntax`. Check [this `api`](#).
-
-:::
-
 Babel配置文件分为两种, 可以一起使用, 也可以单独使用。
 
 - `babel.config.js`项目级别(整个项目都应用这个配置文件)
