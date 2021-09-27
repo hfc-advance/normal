@@ -25,11 +25,11 @@ $layout: (
     @media (max-width: 768px) {
       main[class^="docMainContainer_"] {
         flex: 0 0 100%;
-        max-width: 100%;
+        max-width: calc(100vw - 22px);
       }
 
       div[class^="docPage_"] {
-        padding: 0 6px;
+        padding: 0 11px;
       }
     }
 

@@ -4,6 +4,9 @@ module.exports = [
     "label": "node",
     "items": [
       "package/node/nodeToolTerminalStyle",
+      "package/node/nodeToolHttp",
+      "package/node/nodeToolNPM",
+
       "package/node/nodePerformancePkg",
       "package/node/nodeToolPkg",
       "package/node/nodeToolPkg1",
