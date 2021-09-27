@@ -22,6 +22,17 @@ $layout: (
       max-width: 85%;
     }
 
+    @media (max-width: 768px) {
+      main[class^="docMainContainer_"] {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      div[class^="docPage_"] {
+        padding: 0 6px;
+      }
+    }
+
     main[class^="docItemContainer_"] {
       padding: 0;
     }
