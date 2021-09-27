@@ -1,6 +1,18 @@
 module.exports = [
   {
     "type": "category",
+    "label": "javascript",
+    "items": [
+      "package/js/jsPackageUtils",
+
+      "package/js/jsMaybePkg",
+      "package/js/jsPerformancePkg",
+      "package/js/jsMustPkg"
+    ],
+    "collapsed": false
+  },
+  {
+    "type": "category",
     "label": "node",
     "items": [
       "package/node/nodeToolTerminalStyle",
@@ -14,16 +26,6 @@ module.exports = [
       "package/node/nodeToolPkg1",
       "package/node/nodeToolCli",
       "package/node/nodeProjectHelper"
-    ],
-    "collapsed": false
-  },
-  {
-    "type": "category",
-    "label": "javascript",
-    "items": [
-      "package/js/jsMaybePkg",
-      "package/js/jsPerformancePkg",
-      "package/js/jsMustPkg"
     ],
     "collapsed": false
   },
