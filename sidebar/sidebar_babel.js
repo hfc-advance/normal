@@ -5,6 +5,12 @@ module.exports = [
     collapsed: true,
     items: ['enginee/configItems/frontProjectConfigItems'],
   },
+  {
+    type: 'category',
+    label: 'eslint',
+    collapsed: true,
+    items: ['enginee/eslint/eslintConfigOptions'],
+  },
   // {
   //   type: 'category', label: '',
   //   items: ['enginee/findConfig/getEngineeConfigFile'],
@@ -52,12 +58,6 @@ module.exports = [
     label: 'stylus',
     collapsed: true,
     items: ['enginee/stylus/stylusUsefulPlugin'],
-  },
-  {
-    type: 'category',
-    label: 'eslint',
-    collapsed: true,
-    items: ['enginee/eslint/eslintPlugins'],
   },
   {
     type: 'category',
