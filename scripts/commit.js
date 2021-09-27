@@ -6,6 +6,12 @@ const targetDir = path.resolve(__dirname, '../../hfci.github.io/docs')
 const gitCWD = path.resolve(targetDir, '../')
 
 async function commit () {
+  await execa(
+    'git',
+    ['pull'],
+    { stdio: 'inherit', cwd: gitCWD }
+  )
+
   await del([targetDir], { force: true })
   await fsEx.copy(path.resolve(__dirname, '../build'), targetDir)
 

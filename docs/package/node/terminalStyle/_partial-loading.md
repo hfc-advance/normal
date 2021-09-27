@@ -58,4 +58,4 @@ const tasks = new Listr([
 ]);
 ```
 
-![listr-example.gif](../../../../build/img/listr.gif)
+![listr-example.gif](../../../../static/img/listr.gif)

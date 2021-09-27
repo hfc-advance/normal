@@ -11,4 +11,4 @@ const link = terminalLink('My Website', 'https://sindresorhus.com');
 console.log(link);
 ```
 
-![terminal-link-example.gif](../../../../build/img/terminal-link.gif)
+![terminal-link-example.gif](../../../../static/img/terminal-link.gif)
