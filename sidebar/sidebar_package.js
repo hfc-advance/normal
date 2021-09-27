@@ -1,6 +1,19 @@
 module.exports = [
   {
     "type": "category",
+    "label": "node",
+    "items": [
+      "package/node/nodeToolTerminalStyle",
+      "package/node/nodePerformancePkg",
+      "package/node/nodeToolPkg",
+      "package/node/nodeToolPkg1",
+      "package/node/nodeToolCli",
+      "package/node/nodeProjectHelper"
+    ],
+    "collapsed": false
+  },
+  {
+    "type": "category",
     "label": "javascript",
     "items": [
       "package/js/jsMaybePkg",
@@ -15,18 +28,6 @@ module.exports = [
     "items": [
       "package/vue/vueMustPkg",
       "package/vue/vueMaybePkg"
-    ],
-    "collapsed": false
-  },
-  {
-    "type": "category",
-    "label": "node",
-    "items": [
-      "package/node/nodePerformancePkg",
-      "package/node/nodeToolPkg",
-      "package/node/nodeToolPkg1",
-      "package/node/nodeToolCli",
-      "package/node/nodeProjectHelper"
     ],
     "collapsed": false
   },
