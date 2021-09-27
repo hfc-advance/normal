@@ -7,6 +7,7 @@ module.exports = [
       "package/node/nodeToolHttp",
       "package/node/nodeToolNPM",
       "package/node/nodeToolFile",
+      "package/node/nodeToolUtils",
 
       "package/node/nodePerformancePkg",
       "package/node/nodeToolPkg",

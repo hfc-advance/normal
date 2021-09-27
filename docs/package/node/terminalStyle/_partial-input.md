@@ -1,6 +1,6 @@
 ## 用户提示
 
-### enquirer
+### enquirer 美观的终端对话
 
 > [enquirer](https://github.com/enquirer/enquirer) 时尚，美观的终端用户提示
 

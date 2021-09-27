@@ -1,6 +1,6 @@
 ## 链接
 
-### terminal-link
+### terminal-link 创建链接
 
 > [terminal-link](https://github.com/sindresorhus/terminal-link) 终端创建可访问的链接
 

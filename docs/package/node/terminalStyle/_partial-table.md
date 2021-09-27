@@ -1,6 +1,6 @@
 ## table
 
-### cli-table3
+### cli-table3 渲染table样式
 
 > [cli-table3](https://github.com/cli-table/cli-table3) 终端显示表格
 

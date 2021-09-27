@@ -1,6 +1,6 @@
 ## 颜色
 
-### nanocolors
+### nanocolors 字体颜色
 
 > [nanocolors](https://github.com/ai/nanocolors)，没有任何依赖，包体积也比较小，号称比 chalk 快几倍，能够在浏览器中使用
 
@@ -14,7 +14,7 @@ console.log(
 
 ![example.png](../../../../static/img/nanocolors-example.png)
 
-### gradient-string
+### gradient-string 字体渐变色
 
 > [gradient-string](https://github.com/bokub/gradient-string) 文字渐变色
 

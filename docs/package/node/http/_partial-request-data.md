@@ -1,6 +1,6 @@
 ## 请求数据
 
-### got
+### got 强大的http请求库
 
 > [got](https://github.com/sindresorhus/got) 功能非常强大的 http 请求库，支持各种插件
 
