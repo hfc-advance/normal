@@ -71,6 +71,16 @@ $markdown: (
 );
 
 .markdown {
+  li {
+    > p {
+      margin: 0 0 11px;
+    }
+    + li {
+      p {
+        margin: 0;
+      }
+    }
+  }
   > p {
     margin: 0 0 11px;
     + p {
