@@ -73,6 +73,8 @@ trim_trailing_whitespace = false
 
 ```json title=".vscode/extension.json"
 {
-  "editorconfig.editorconfig"
+  "recommendations": [
+    "editorconfig.editorconfig"
+  ]
 }
 ```
