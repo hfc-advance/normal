@@ -94,3 +94,49 @@ module.exports = {
   ]
 }
 ```
+
+## 注意事项
+
+> 建议安装编辑器插件，而且开启`保存自动格式化功能`。
+
+建议安装插件：
+
+```json title=".vscode/extension.json"
+{
+  "recommendations": [
+    "esbenp.prettier-vscode"
+  ]
+}
+```
+
+保存自动格式化配置：
+
+```json title=".vscode/settings.json"
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  // highlight-start
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  }
+  // highlight-end
+}
+```
+
+:::danger
+
+- 如上图所标示的，需要设置每种语言的配置，要不然可能不生效。
+- 支持的语言有：
+
+  ```javascript
+  javascript
+  javascriptreact
+  typescript
+  typescriptreact
+  json
+  graphql
+  ...
+  ```
+
+:::
