@@ -9,7 +9,7 @@ module.exports = [
     type: 'category',
     label: 'eslint',
     collapsed: true,
-    items: ['enginee/eslint/eslintEditorconfig', 'enginee/eslint/eslintConfigOptions', "enginee/eslint/eslintPrettier"],
+    items: ['enginee/eslint/eslintEditorconfig', 'enginee/eslint/eslintConfigOptions', "enginee/eslint/eslintPrettier", "enginee/eslint/eslintPrettierEslintEditorconfig"],
   },
   // {
   //   type: 'category', label: '',
