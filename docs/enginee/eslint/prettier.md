@@ -95,6 +95,35 @@ module.exports = {
 }
 ```
 
+## prettier 插件生态
+
+> 插件功能的支持让prettier的功能更加强大和丰富，[prettier plugin](https://prettier.io/docs/en/plugins.html#using-plugins)
+
+比如：
+
+### [prettier-plugin-sort-imports自定义模块导入顺序](https://github.com/trivago/prettier-plugin-sort-imports)
+
+可以自定义模块导入顺序
+
+![import-sort](/img/import-sort.gif)
+
+```shell
+npm install --save-dev @trivago/prettier-plugin-sort-imports
+```
+
+```javascript
+module.exports = {
+  "printWidth": 80,
+  "tabWidth": 4,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "jsxBracketSameLine": true,
+  "semi": true,
+  "importOrder": ["^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]"],
+  "importOrderSeparation": true,
+}
+```
+
 ## 注意事项
 
 > 建议安装编辑器插件，而且开启`保存自动格式化功能`。
