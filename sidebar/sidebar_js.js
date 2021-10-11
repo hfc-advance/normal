@@ -2,6 +2,12 @@ module.exports =
 [
   {
     type: 'category',
+    label: 'regexp',
+    items: ['js/regExp/jsRegExpBase', 'js/regExp/jsRegExpSkill'],
+    collapsed: false,
+  },
+  {
+    type: 'category',
     label: '干货',
     items: [
       'js/goods/jsExportReference',
@@ -25,12 +31,6 @@ module.exports =
     type: 'category',
     label: 'vue',
     items: ['js/vue/vueGoods'],
-    collapsed: false,
-  },
-  {
-    type: 'category',
-    label: 'regexp',
-    items: ['js/regExp/jsRegExp'],
     collapsed: false,
   }
 ]
