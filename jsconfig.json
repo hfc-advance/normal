@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./", // 根路径
+
+    "paths": {
+      "@/*": ["./src/*"] // 路径映射，与 baseUrl 关联
+    },
+
+    "checkJs": true,
+
+    "target": "ESNext",
+
+    "module": "esnext",
+
+    // 实验性选项
+    "experimentalDecorators": true, // 启用实验性的ES装饰器
+    "emitDecoratorMetadata": true, // 给源码里的装饰器声明加上设计类型元数据
+
+    "allowSyntheticDefaultImports": false, // 允许从没有默认导出的模块中默认导入
+  }
+}
