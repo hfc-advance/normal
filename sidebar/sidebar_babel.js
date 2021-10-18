@@ -1,6 +1,12 @@
 module.exports = [
   {
     type: 'category',
+    label: '设计模式',
+    collapsed: true,
+    items: ['enginee/designMode/frontDesignModeBase'],
+  },
+  {
+    type: 'category',
     label: '工程配置项',
     collapsed: true,
     items: ['enginee/configItems/frontProjectConfigItems'],
