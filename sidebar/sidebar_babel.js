@@ -9,13 +9,19 @@ module.exports = [
     type: 'category',
     label: '工程配置项',
     collapsed: true,
-    items: ['enginee/configItems/frontProjectConfigItems'],
+    items: ['enginee/configItems/frontProjectConfigItems', 'enginee/configItems/frontProjectBABELvsTSC'],
   },
   {
     type: 'category',
     label: 'eslint',
     collapsed: true,
     items: ['enginee/eslint/eslintEditorconfig', 'enginee/eslint/eslintConfigOptions', "enginee/eslint/eslintPrettier", "enginee/eslint/eslintPrettierEslintEditorconfig"],
+  },
+  {
+    type: 'category',
+    label: 'typescript',
+    collapsed: true,
+    items: ['enginee/typescript/typescriptBseconfig', 'enginee/typescript/typescriptTsConfigJSON'],
   },
   // {
   //   type: 'category', label: '',
@@ -40,12 +46,6 @@ module.exports = [
     label: 'git',
     collapsed: true,
     items: ['enginee/git/gitNotify'],
-  },
-  {
-    type: 'category',
-    label: 'typescript',
-    collapsed: true,
-    items: ['enginee/typescript/typescriptBseconfig'],
   },
   {
     type: 'category',
