@@ -21,7 +21,7 @@ module.exports = [
     type: 'category',
     label: 'typescript',
     collapsed: true,
-    items: ['enginee/typescript/typescriptBseconfig', 'enginee/typescript/typescriptTsConfigJSON'],
+    items: ['enginee/typescript/typescriptBseconfig', 'enginee/typescript/typescriptTsConfigJSON', 'enginee/typescript/typescriptImportTypes'],
   },
   // {
   //   type: 'category', label: '',
