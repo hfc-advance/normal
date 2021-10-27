@@ -26,3 +26,44 @@ hash({ foo: { bar: 1 } }) === hash({ foo: { bar: 1 } })
 ### 关于对象转字符串
 
 <ObjectCompare />
+
+## json
+
+### serialize-javascript 将任意数据转成json
+
+> [serialize-javascript](https://github.com/yahoo/serialize-javascript) 可以将`js`任意数据包括正则和方法转成`json`存储
+
+```javascript
+var serialize = require('serialize-javascript');
+
+serialize({
+    str  : 'string',
+    num  : 0,
+    obj  : {foo: 'foo'},
+    arr  : [1, 2, 3],
+    bool : true,
+    nil  : null,
+    undef: undefined,
+    inf  : Infinity,
+    date : new Date("Thu, 28 Apr 2016 22:02:17 GMT"),
+    map  : new Map([['hello', 'world']]),
+    set  : new Set([123, 456]),
+    fn   : function echo(arg) { return arg; },
+    re   : /([^\s]+)/g,
+    big  : BigInt(10),
+});
+```
+
+输出一下结果：
+
+```javascript
+'{"str":"string","num":0,"obj":{"foo":"foo"},"arr":[1,2,3],"bool":true,"nil":null,"undef":undefined,"inf":Infinity,"date":new Date("2016-04-28T22:02:17.000Z"),"map":new Map([["hello","world"]]),"set":new Set([123,456]),"fn":function echo(arg) { return arg; },"re":new RegExp("([^\\\\s]+)", "g"),"big":BigInt("10")}'
+```
+
+当我们想要再使用这个数据的时候，可以通过`eval`返回原始数据格式：
+
+```javascript
+function deserialize(serializedJavascript){
+  return eval('(' + serializedJavascript + ')');
+}
+```
