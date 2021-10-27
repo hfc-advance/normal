@@ -67,3 +67,16 @@ function fn() {
 
 export {}
 ```
+
+3. 限制使用`环境常量枚举`引用，也就是申明的全局的常用枚举
+
+```typescript
+declare const enum Numbers {
+  One
+}
+
+// 使用类型✅
+const num: Numbers = 1
+// 使用枚举引用❎
+const num = Numbers.One
+```
