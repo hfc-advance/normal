@@ -5,6 +5,8 @@ hide_title: true
 sidebar_label: tsconfig.json
 ---
 
+import Link from '@docusaurus/Link'
+
 ## 配置说明
 
 ### target
@@ -38,3 +40,30 @@ sidebar_label: tsconfig.json
 :::
 
 ### isolatedModules
+
+> 确保每个文件都是能单独编译的，不依赖上下文，配置项不会改变编译过后的代码行为，只是会在检测到文件不能单独编译的时候会发出警告
+
+:::danger
+使用`babel`编译器的时候，一定要开启这个功能，可以帮忙检测风险代码
+:::
+
+能达到以下几点作用：
+
+1. 检测文件不能单独编译的代码：<Link to="/docs/enginee/typescript/typescriptImportTypes#案例分析">案例分析</Link>
+2. 要求每个文件必须是模块也就是必须包含`import/export`
+
+```javascript
+// isolatedModules校验不通过，会报错
+function fn() {
+  doThing()
+}
+```
+
+```javascript
+// isolatedModules校验通过
+function fn() {
+  doThing()
+}
+
+export {}
+```
