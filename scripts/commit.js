@@ -15,21 +15,25 @@ async function commit () {
   await del([targetDir], { force: true })
   await fsEx.copy(path.resolve(__dirname, '../build'), targetDir)
 
+  console.log(1)
   await execa(
     'git',
     ['add', '.'],
     { stdio: 'inherit', cwd: gitCWD }
   )
+  console.log(2)
   await execa(
     'git',
     ['commit', '-m', 'auto'],
     { stdio: 'inherit', cwd: gitCWD }
   )
+  console.log(3)
   await execa(
     'git',
     ['push'],
     { stdio: 'inherit', cwd: gitCWD }
   )
+  console.log(4)
   await execa(
     'git',
     ['commit'],
