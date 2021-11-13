@@ -4,7 +4,8 @@ module.exports = [
     "label": "使用技巧",
     "items": [
       "git/skill/gitSkillBlack",
-      "git/skill/gitCommandSkill"
+      "git/skill/gitCommandSkill",
+      "git/skill/gitMultipleUser"
     ],
     "collapsed": false
   }

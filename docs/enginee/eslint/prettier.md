@@ -169,3 +169,78 @@ module.exports = {
   ```
 
 :::
+
+## prettier和eslint结合
+
+>要想`prettier`和`eslint`不冲突，必须做到：`eslint-plugin-prettier` 以及 `eslint-config-prettier` 结合使用。
+
+### eslint-plugin-prettier
+
+> 插件主要是用来找出错误：这里的错误指的是不符合 `.prettierc` 配置的规则错误，因为默认 `ESLint` 根本就不识别 `.prettierc` 配置，所以需要 `ESLint` 插件来标记错误：插件的工作原理是先调用 `Prettier` 对你的代码进行格式化，然后会把格式化前后不一致的地方进行标记，通过配置 `'prettier/prettier': 'error'` 此条规则会将标记地方进行 `error` 级别的报错提示，然后可以通过 `ESLint` 的 `--fix` 自动修复功能将其修复。
+>
+
+```jsx
+module.exports = {
+  plugins: [
+    // eslint-plugin-prettier
+    'prettier'
+  ],
+  rules: {
+    'prettier/prettier': 'error'
+  }
+}
+```
+
+插件内置了 `recommended` 的配置其实也就只有三项：
+
+```jsx
+module.exports = {
+  configs: {
+    recommended: {
+      extends: ['prettier'],
+      plugins: ['prettier'],
+      rules: {
+        'prettier/prettier': 'error',
+        'arrow-body-style': 'off',
+        'prefer-arrow-callback': 'off'
+      }
+    }
+  }
+}
+```
+
+### eslint-config-perttier
+
+> 光有检查错误还不够，要是发现了错误，但是这个错误和 `eslint` 里面的错误冲突了怎么办：解决冲突的思路就是通过将这个包提供的扩展放到 `extends` 最后面引入，然后将可能冲突的 `ESLint` 规则全部关闭掉。
+> 
+
+源码如下：
+
+```jsx
+module.exports = {
+  rules: {
+    // The following rules can be used in some cases. See the README for more
+    // information. (These are marked with `0` instead of `"off"` so that a
+    // script can distinguish them.)
+    "curly": 0,
+    "lines-around-comment": 0,
+    "max-len": 0,
+    "no-confusing-arrow": 0,
+    "no-mixed-operators": 0,
+    "no-tabs": 0,
+    "no-unexpected-multiline": 0,
+    "quotes": 0,
+    "@typescript-eslint/quotes": 0,
+    "babel/quotes": 0,
+    "vue/html-self-closing": 0,
+    "vue/max-len": 0,
+    ...
+  }
+}
+```
+
+:::caution
+其实可以看出这里有个问题：`eslint-config-prettier` 关闭了所有 `prettier` 能够设置的规则，而不是根据当前项目 `.prettierc` 配置文件里面的规则来覆盖，这样就会出现有些规则都不会检查的问题，因为关闭掉的规则，`.perttierc` 文件里面可能没有配置。
+:::
+
+所以当我们用了 `prettier` 配置就应该让 `prettierc` 文件配置完整，配置所有规则。
