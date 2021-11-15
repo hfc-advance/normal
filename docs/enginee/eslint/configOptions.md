@@ -14,6 +14,7 @@ import Extends, { rightToc as ExtendsRightToc } from './configOptions/_partial-e
 import Root, { rightToc as RootRightToc } from './configOptions/_partial-root.md'
 import Overrides, { rightToc as OverridesRightToc } from './configOptions/_partial-overrides.md'
 import Settings, { rightToc as SettingsRightToc } from './configOptions/_partial-settings.md'
+import BestUsage, { rightToc as BestUsageRightToc } from './configOptions/_partial-best-usage.md'
 
 <Parser />
 <ParserOptions />
@@ -25,6 +26,7 @@ import Settings, { rightToc as SettingsRightToc } from './configOptions/_partial
 <Root />
 <Overrides />
 <Settings />
+<BestUsage />
 
 export const rightToc = [
   ...ParserRightToc,
@@ -36,5 +38,6 @@ export const rightToc = [
   ...ExtendsRightToc,
   ...RootRightToc,
   ...OverridesRightToc,
-  ...SettingsRightToc
+  ...SettingsRightToc,
+  ...BestUsageRightToc
 ]
