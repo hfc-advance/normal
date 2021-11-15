@@ -9,7 +9,7 @@ module.exports = [
     type: 'category',
     label: '工程配置项',
     collapsed: true,
-    items: ['enginee/configItems/frontProjectConfigItems', 'enginee/configItems/frontProjectBABELvsTSC'],
+    items: ['enginee/configItems/frontProjectConfigItems', 'enginee/configItems/frontProjectBABELvsTSC', 'enginee/configItems/frontProjectConfigItemsVscodeSettingJson'],
   },
   {
     type: 'category',
