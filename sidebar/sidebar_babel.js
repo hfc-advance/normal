@@ -1,6 +1,12 @@
 module.exports = [
   {
     type: 'category',
+    label: 'npm',
+    collapsed: true,
+    items: ['enginee/npm/packagejsonKeys', 'enginee/npm/npmShell', 'enginee/npm/.npmrc', 'enginee/npm/node_modules', 'enginee/npm/npmPnpm'],
+  },
+  {
+    type: 'category',
     label: '设计模式',
     collapsed: true,
     items: ['enginee/designMode/frontDesignModeBase'],
@@ -34,12 +40,6 @@ module.exports = [
     label: 'webpack',
     collapsed: true,
     items: ['enginee/webpack/webpackLoader', 'enginee/webpack/webpackOftenFunctional', 'enginee/webpack/webpackCompileProcess', 'enginee/webpack/webpackTapable', 'enginee/webpack/webpackModuleFederation', 'enginee/webpack/webpackAssetModule', 'enginee/webpack/webpack5Changelog', 'enginee/webpack/webpackOptimization', 'enginee/webpack/webpackImportantMethod', 'enginee/webpack/webpackOftenPkg', 'enginee/webpack/webpackFood', 'enginee/webpack/webpackComponentNotice', 'enginee/webpack/webpackPlugin', 'enginee/webpack/webpackUsefulPlugin'],
-  },
-  {
-    type: 'category',
-    label: 'npm',
-    collapsed: true,
-    items: ['enginee/npm/packagejsonKeys', 'enginee/npm/npmShell', 'enginee/npm/.npmrc', 'enginee/npm/node_modules'],
   },
   {
     type: 'category',
