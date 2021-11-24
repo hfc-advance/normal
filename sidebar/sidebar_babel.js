@@ -1,6 +1,12 @@
 module.exports = [
   {
     type: 'category',
+    label: 'esbuild',
+    collapsed: true,
+    items: ['enginee/esbuild/esbuildBase'],
+  },
+  {
+    type: 'category',
     label: 'npm',
     collapsed: true,
     items: ['enginee/npm/packagejsonKeys', 'enginee/npm/npmShell', 'enginee/npm/.npmrc', 'enginee/npm/node_modules', 'enginee/npm/npmPnpm'],
