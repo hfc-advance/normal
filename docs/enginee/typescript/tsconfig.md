@@ -122,3 +122,40 @@ const num = Numbers.One
 - 因为像`babel`等编译器没有上下文的概念，那么申明的`全局常量枚举`，`babel`是无法识别到引用的值，那么就没办法用实际值替换常量枚举引用，导致报错
 
 :::
+
+### rootDir
+
+> 相当于`cwd`，主要用来设置编译器的执行编译的上下文，会影响到输出文件的目录：
+
+```javascript title="源码文件"
+.
+├── src
+│   ├── index.ts
+│   ├── interface.ts
+│   ├── readJSONData.ts
+│   └── readTSData.ts
+└── tsconfig.json
+```
+
+```javascript title="如果“rootDir: .“，编译之后的代码目录，多了一层“src”目录："
+.
+├── dist
+│   ├── src
+│   │   ├── index.js
+│   │   ├── interface.js
+│   │   ├── readJSONData.js
+│   │   └── readTSData.js
+```
+
+```javascript title="如果“rootDir: './src'”，编译之后的代码目录，就没有“src”目录："
+.
+├── dist
+│   ├── index.js
+│   ├── interface.js
+│   ├── readJSONData.js
+│   └── readTSData.js
+```
+
+## 参考
+
+- [typescript#tsconfig](https://www.typescriptlang.org/tsconfig#rootDirs)
