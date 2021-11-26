@@ -15,6 +15,7 @@ module.exports = [
     "type": "category",
     "label": "node",
     "items": [
+      "package/node/nodeModulePath",
       "package/node/nodeToolTerminalStyle",
       "package/node/nodeToolHttp",
       "package/node/nodeToolNPM",
