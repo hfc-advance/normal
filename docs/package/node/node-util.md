@@ -44,3 +44,12 @@ console.log('isDeepStrictEqual', util.isDeepStrictEqual(arr1, arr2)) // true
 ```
 
 ### 异步函数改造 primise
+
+>  Node 10 发布的时候，原生模块都新增了一个 .promises 属性，该属性下的所有 API 都 Promise 风格的
+
+```javascript
+const fs = require('fs').promises
+fs.readFile('./2021-11-11.log', { encoding: 'utf-8' })
+  .then(text => console.log(text)) 
+ .catch(error => console.error(error))
+```
