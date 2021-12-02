@@ -3,6 +3,8 @@ module.exports = [
     "type": "category",
     "label": "知识点",
     "items": [
+      "node/basic/nodeRequireSourceCode",
+      "node/basic/nodeESM",
       "node/basic/nodeEntryPoint",
       "node/basic/nodeModuleAlias",
       "node/basic/nodeErrorHandle",

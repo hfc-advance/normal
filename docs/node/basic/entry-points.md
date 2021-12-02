@@ -137,9 +137,6 @@ import { dothing } from '@anijs/prettier'
       "import": "dep-node-native",
       "require": "./dep-polyfill.js"
     }
-  },
-  "dependencies": {
-    "dep-node-native": "^1.0.0"
   }
 }
 ```
@@ -153,3 +150,7 @@ import dep from '#dep' //相当于加载dep-node-native
 :::danger
 映射名称必须始终以 `#` 开头
 :::
+
+## 参考
+
+- [Node.js:packages](http://nodejs.cn/api/packages.html#modules-packages)
