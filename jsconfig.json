@@ -11,6 +11,7 @@
     "target": "ESNext",
 
     "module": "esnext",
+    "moduleResolution": "Node",
 
     // 实验性选项
     "experimentalDecorators": true, // 启用实验性的ES装饰器

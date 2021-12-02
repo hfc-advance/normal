@@ -9,6 +9,12 @@
     "commit": "node scripts/beforeBuild.js & npm run build & node scripts/commit.js",
     "write-heading-ids": "docusaurus write-heading-ids"
   },
+  "imports": {
+    "#test": {
+      "node": "classnames",
+      "default": "./test.js"
+    }
+  },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-alpha.63",
     "@docusaurus/preset-classic": "^2.0.0-alpha.63",

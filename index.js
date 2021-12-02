@@ -1,1 +1,3 @@
-console.log('require')
+const test = require('#test')
+
+console.log(test)
