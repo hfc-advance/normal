@@ -58,9 +58,11 @@ sidebar_label: debug
 
 在 `chrome` 地址栏输入 `chrome://inspect`，可以看到有能`attach`的`socket`，如果没有可以点击 `configure` 来配置目标端口：
 
-![chrome-inspect](../../../static/img/chrome-inspect.png)
+![chrome-inspect](../../../static/img/chrome-inspect.png)，[调试typescript](https://code.visualstudio.com/docs/typescript/typescript-debugging)
 
 ### vscode
+
+> [vscode debugger配置属性](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_launch-configuration-attributes)
 
 在 `vscode` 里面写代码，在 `chrome devtools` 里调试比较麻烦，`vscode` 也实现了 `debugger` 的支持，可以直接用 `vscode` 来调试。`vscode`调试有两种方式：
 
@@ -83,5 +85,16 @@ sidebar_label: debug
 
 2. `launch`：会自动先启动`debugger server` 然后`attach`上去：
 
-```json
-```
+  ```json
+  {
+    "configurations": [
+      {
+        "name": "Launch Program",
+        "program": "${workspaceFolder}/index.js",
+        "request": "launch",
+        "stopOnEntry": true,
+        "type": "node"
+      }
+    ]
+  }
+  ```
