@@ -19,9 +19,9 @@ module.exports = [
   },
   {
     "type": "category",
-    "label": "debug",
+    "label": "高阶技能",
     "items": [
-      "node/debug/nodeDebug"
+      "node/skill/nodeDebug"
     ],
     "collapsed": false
   },
