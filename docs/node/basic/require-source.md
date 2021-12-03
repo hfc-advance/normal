@@ -93,3 +93,7 @@ Module.prototype._compile = function(content, filename) {
   ```
 
 :::
+
+## 参考
+
+- [require() 源码解读](https://www.ruanyifeng.com/blog/2015/05/require.html)
