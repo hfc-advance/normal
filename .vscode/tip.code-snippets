@@ -1,4 +1,12 @@
 {
+  "code-highlight-line": {
+    "prefix": [
+      "linespace"
+    ],
+    "body": [
+      "<div class=\"line-space-normal\"></div>"
+    ]
+  },
   "code-highlight": {
     "prefix": [
       "codehigh-next"

@@ -92,3 +92,6 @@ a.contents__link[href^='#8-'] {
 a.contents__link[href^='#9-'] {
   padding-left: 11px;
 } */
+.line-space-normal {
+  height: 0.9em;
+}
