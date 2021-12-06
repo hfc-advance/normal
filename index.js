@@ -1,3 +1,3 @@
-const test = require('#test')
+import module from './module.js'
 
-console.log(test)
+console.log(module)
