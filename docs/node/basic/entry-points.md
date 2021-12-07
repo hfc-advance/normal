@@ -5,6 +5,8 @@ hide_title: true
 sidebar_label: entry-point
 ---
 
+import PackageJSONImports from './entry-points/\_partial-imports.md'
+
 ## package.json 包入口字段定义
 
 > 在`node`环境中，只能够通过`main`和`exports`这两个字段来设置包的入口文件。
@@ -27,15 +29,15 @@ sidebar_label: entry-point
 
 > `exports`的优先级大于`main`的优先级。
 
-  ```json
-  {
-    "name": "@anijs/prettier",
-    "main": "./index.js",
-    "exports": {
-      ".": "./dist/index.js"
-    }
+```json
+{
+  "name": "@anijs/prettier",
+  "main": "./index.js",
+  "exports": {
+    ".": "./dist/index.js"
   }
-  ```
+}
+```
 
 上面的代码，在支持`exports`的`Node.js 版本`环境，任意情况都是采用`exports`，不区分当前是采用`ESM`还是`CommonJS`
 
@@ -127,29 +129,7 @@ import { dothing } from '@anijs/prettier'
 
 ## imports
 
-> `imports` - 用来定义内部模块的映射，可以理解为别名
-
-```json
-{
-  "name": "@anijs/prettier",
-  "imports": {
-    "#dep": {
-      "import": "dep-node-native",
-      "require": "./dep-polyfill.js"
-    }
-  }
-}
-```
-
-这样就可以直接通过`#dep`映射对应的模块：
-
-```javascript
-import dep from '#dep' //相当于加载dep-node-native
-```
-
-:::danger
-映射名称必须始终以 `#` 开头
-:::
+<PackageJSONImports />
 
 ## 参考
 
