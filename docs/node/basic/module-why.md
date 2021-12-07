@@ -31,9 +31,9 @@ sidebar_label: 模块化解决什么问题
 - 首先每个文件也就是每个模块会被包裹在一个闭包函数：解决了作用域的问题：
 
   ```javascript
-  (function (exports, require, module, __filename, __dirname) {
+  ;(function (exports, require, module, __filename, __dirname) {
     // 模块源码
-  });
+  })
   ```
 
 - 每个文件导出的值会被存储在文件的`exports`变量上，当一个文件依赖另一个文件调用`require`时候，就会将依赖文件的`exports`变量上值`拷贝一份`作为调用`require`函数的返回结果：这样就解决了局部作用域内变量共享的问题
@@ -46,7 +46,7 @@ sidebar_label: 模块化解决什么问题
 ```javascript
 // item.js
 let a = 'item'
-const obj = { name: '崔海峰'}
+const obj = { name: '崔海峰' }
 function changeValue() {
   obj.name = '小崔'
   a = 'a-changed'
@@ -62,7 +62,6 @@ const { obj, changeValue, a } = require('./item.js')
 console.log(obj, a) // { name: '崔海峰' } item
 changeValue()
 console.log(obj, a) // { name: '小崔' } item
-
 ```
 
 可以看到基础数据类型`a`修改后的之后不影响导入模块的`a`的值，但是引用类型`obj`就会相互影响
@@ -70,3 +69,7 @@ console.log(obj, a) // { name: '小崔' } item
 
 ### ES Module
 
+- `JS引擎`会连接模块的`exports`和`imports`到内存中同一个区域，就建立起了关联：这样就解决了局部作用域内变量共享的问题。
+- `ES Module`每个文件都会有一个`module record`也就是模块记录，这样在一个文件内就有一个单独的上下文，所有的变量都只有在这个作用域内可访问。
+
+![module_why_esmodulescope](../../../static/img/load_module_imports.png)
