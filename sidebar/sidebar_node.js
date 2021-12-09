@@ -23,7 +23,8 @@ module.exports = [
     "type": "category",
     "label": "高阶技能",
     "items": [
-      "node/skill/nodeMultipleProgress",
+      "node/skill/nodeMultipleProgressContent",
+      "node/skill/nodeMultipleProgressUse",
       "node/skill/nodeDebug"
     ],
     "collapsed": false

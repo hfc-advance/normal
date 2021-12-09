@@ -1,3 +1,1 @@
-import module from './module.js'
-
-console.log(module)
+console.log(process.pid)
