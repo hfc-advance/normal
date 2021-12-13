@@ -25,3 +25,28 @@ console.log(gradient('cyan', 'pink')('Hello world!'));
 ```
 
 ![gradient-string-example.png](../../../../static/img/gradient-string-example.png)
+
+### figlet 艺术字体
+
+> [figlet](https://github.com/patorjk/figlet.js) 用来呈现艺术字体
+
+```javascript
+var figlet = require('figlet');
+
+figlet('Hello World!!', function(err, data) {
+  if (err) {
+    console.log('Something went wrong...');
+    console.dir(err);
+    return;
+  }
+  console.log(data)
+})
+```
+
+```javascript
+  _   _      _ _        __        __         _     _ _ _
+ | | | | ___| | | ___   \ \      / /__  _ __| | __| | | |
+ | |_| |/ _ \ | |/ _ \   \ \ /\ / / _ \| '__| |/ _` | | |
+ |  _  |  __/ | | (_) |   \ V  V / (_) | |  | | (_| |_|_|
+ |_| |_|\___|_|_|\___/     \_/\_/ \___/|_|  |_|\__,_(_|_)
+```

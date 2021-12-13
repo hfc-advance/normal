@@ -1,6 +1,18 @@
 module.exports = [
   {
     type: 'category',
+    label: 'DSL',
+    collapsed: true,
+    items: ['enginee/DSL/DSLBase', 'enginee/DSL/DSLPEGJS']
+  },
+  {
+    type: 'category',
+    label: 'jsonschema',
+    collapsed: true,
+    items: ['enginee/jsonschema/jsonschemaVscodeIntellisense'],
+  },
+  {
+    type: 'category',
     label: 'esbuild',
     collapsed: true,
     items: ['enginee/esbuild/esbuildBase'],
