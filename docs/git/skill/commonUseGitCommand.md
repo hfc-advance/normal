@@ -40,3 +40,16 @@ sidebar_label: 常用命令
 > `git checkout commit`，可以将 HEAD 指向这个 commit，然后针对当时这个 commit 时的状态继续操作，操作完成之后可以创建一个分支保存
 
 为什么说是`游离状态`修改，可以作为实验性某个功能来操作，因为当前分支肯定是包含了游离状态的 commit，针对这么 commit 的所有操作，照理说都可以直接在当前分支最后的一个 commit 来操作
+
+## git reset, revert, check 区别
+
+1、git reset 和 git check 可以作用于文件级别，git revert 只能作用于 commit 级别
+
+:::danger
+
+```shell title="针对index.txt重置到commitID时的状态"
+git reset commitID index.txt
+```
+
+不能使用`--hard`标识符，因为针对文件级别的操作，肯定是不能丢弃 commit 的，修改完 index.txt 需要提交一个新的 commit
+:::
