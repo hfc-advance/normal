@@ -4,6 +4,7 @@ module.exports = [
     label: '干货',
     items: [
       'react/goods/reactHookSkill',
+      'react/goods/reactPerformance',
       'react/goods/reactPersistedState',
       'react/goods/reactQuestionFix',
       'react/goods/reactBase',
