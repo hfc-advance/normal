@@ -6,7 +6,16 @@
 const txtElement = <div>title</div>
 ```
 
-```jsx title="2、通过children渲染，不挂载Component"
+```javascript title="2、useMemo包裹组件"
+function Parent(props) {
+  const [count, setCount] = React.useState(0)
+  // highlight-next-line
+  const memorizedSon = useMemo(() => <Son title={props.title} />, [protps.title])
+  return <div>{memorizedSon}</div>
+}
+```
+
+```jsx title="3、通过children渲染，不挂载Component"
 function Son() {
   return <div>Son</div>
 }
