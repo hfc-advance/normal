@@ -20,6 +20,12 @@ module.exports = [
   },
   {
     type: 'category',
+    label: 'next.js',
+    items: ['react/nextjs/reactNextJsBasicFeatures'],
+    collapsed: false
+  },
+  {
+    type: 'category',
     label: 'styled-components',
     items: [
       'react/styledComponents/reactStyledComponentsTypescript',
