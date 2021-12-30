@@ -1,9 +1,7 @@
 {
   "restartable": "rs",
-  "watch": [
-    "sidebar/"
-  ],
+  "watch": ["sidebar/"],
   "verbose": true,
   "delay": "1000",
-  "exec": "docusaurus start"
+  "exec": "docusaurus start --port=3366"
 }

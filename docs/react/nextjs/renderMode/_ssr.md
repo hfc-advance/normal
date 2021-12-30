@@ -1,14 +1,11 @@
-## 客户端渲染（CSR）
-
-普通的单页应用只有一个 HTML，初次请求返回的 HTML 中没有任何页面内容，需要通过网络请求 JS bundle 并渲染，整个渲染过程都在客户端完成，所以叫客户端渲染（CSR）
-
 ## 服务端渲染（SSR）
 
-### 运行步骤
+### SSR 运行步骤
 
 1. 用户发送链接请求到 Server
 2. Server 请求数据
-3. 将请求的数据和组件结合 response 成 html 内容，返回到浏览器
+3. 将请求的数据和组件结合 response 成 html 内容以及 js，返回到浏览器
+4. 客户端渲染 html，执行 React 代码将 javascript 事件绑定，激活以让页面具有交互性，也称为`水合`
 
 ![nextjs-ssr](../../../../static/nextjs_ssr.png)
 
@@ -22,7 +19,7 @@
 
 ### Next.js SSR 开启
 
-1、开启方式：路由页面导出`getServerSideProps`方法
+开启方式：路由页面导出`getServerSideProps`方法
 
 ```javascript
 export default function FirstPost(props) {
@@ -48,14 +45,14 @@ export async function getServerSideProps(context) {
 }
 ```
 
-2、 [`context`](https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering)对象常用数据：
+### [`context`](https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering) 对象
 
 - `params`：动态路由`[id].js`的参数: `{id:...}`
 - `req`：http request 的数据
 - `res`：http response 的数据
 - `requery`：包含 params 以及`?`参数部分， 路由定义：`post/[id].js`，访问链接：`post/test?art=1`，最终数据：`{ id: 'test', art: 1 }`
 
-3、`getServerSideProps`可以返回的数据对象：
+### getServerSideProps 返回对象
 
 - `props`
 - `notFound`：返回 404 页面
@@ -86,8 +83,8 @@ export async function getServerSideProps(context) {
 
 :::
 
-## 渲染模式的选择
+<!-- ## 渲染模式的选择
 
 | **渲染模式** | **适用场景**      | **不适用场景**           | **备注**                                                                                           |
 | ------------ | ----------------- | ------------------------ | -------------------------------------------------------------------------------------------------- |
-| SSR          | 必须要 SEO 的场景 | 私人的，特定于用户的页面 | 大多数场景使用 SSG，1、预编译好的 html 浏览器端发送数据请求，速度不会太慢，2、减少服务器压力和浪费 |
+| SSR          | 必须要 SEO 的场景 | 私人的，特定于用户的页面 | 大多数场景使用 SSG，1、预编译好的 html 浏览器端发送数据请求，速度不会太慢，2、减少服务器压力和浪费 | -->

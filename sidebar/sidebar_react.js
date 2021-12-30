@@ -21,7 +21,7 @@ module.exports = [
   {
     type: 'category',
     label: 'next.js',
-    items: ['react/nextjs/reactNextJsBasicFeatures'],
+    items: ['react/nextjs/reactNextJsRenderMode'],
     collapsed: false
   },
   {
