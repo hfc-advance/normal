@@ -5,6 +5,7 @@ module.exports = [
     items: [
       'react/goods/reactHookSkill',
       'react/goods/reactPerformance',
+      'react/goods/reactSkill',
       'react/goods/reactPersistedState',
       'react/goods/reactQuestionFix',
       'react/goods/reactBase',
