@@ -265,6 +265,6 @@ module.exports = {
       },
     ],
   ],
-  plugins: ['docusaurus-plugin-sass'],
+  plugins: ['docusaurus-plugin-sass', 'remark-docusaurus-tabs'],
   themes: ['@docusaurus/theme-live-codeblock']
 }

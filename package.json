@@ -31,7 +31,8 @@
     "react-dom": "^16.8.4",
     "react-inlinesvg": "^2.0.1",
     "react-scripts": "^4.0.3",
-    "remark-admonitions": "^1.2.1"
+    "remark-admonitions": "^1.2.1",
+    "remark-docusaurus-tabs": "^0.2.0"
   },
   "browserslist": {
     "production": [
