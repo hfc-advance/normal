@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 <Tabs
   defaultValue='1'
   values={[
-    {label: 'vue3:setup', value: '1'},
+    {label: 'vue3', value: '1'},
     {label: 'vue2', value: '2'}
   ]}>
   <TabItem value='1'>
