@@ -84,6 +84,7 @@ const num = Numbers.One
 :::danger
 
 - 枚举比较特殊，本身具备运行时代码
+
   - 正常的枚举会被编译成对象
 
     ```typescript title="input.ts"
@@ -95,13 +96,13 @@ const num = Numbers.One
     ```
 
     ```typescript title="output.js"
-    "use strict";
-    var Numbers;
-    (function (Numbers) {
-        Numbers[Numbers["One"] = 0] = "One";
-        Numbers[Numbers["Two"] = 1] = "Two";
-    })(Numbers || (Numbers = {}));
-    const num = Numbers.One;
+    'use strict'
+    var Numbers
+    ;(function (Numbers) {
+      Numbers[(Numbers['One'] = 0)] = 'One'
+      Numbers[(Numbers['Two'] = 1)] = 'Two'
+    })(Numbers || (Numbers = {}))
+    const num = Numbers.One
     ```
 
   - 常量枚举，在使用枚举引用的地方，会被直接编译成实际值.(因为常量枚举意味着数据类型是不会变的，比较简单)
@@ -115,8 +116,8 @@ const num = Numbers.One
     ```
 
     ```typescript title="output.js"
-    "use strict";
-    const num = 0 /* One */;
+    'use strict'
+    const num = 0 /* One */
     ```
 
 - 因为像`babel`等编译器没有上下文的概念，那么申明的`全局常量枚举`，`babel`是无法识别到引用的值，那么就没办法用实际值替换常量枚举引用，导致报错
@@ -154,6 +155,33 @@ const num = Numbers.One
 │   ├── interface.js
 │   ├── readJSONData.js
 │   └── readTSData.js
+```
+
+### noUnusedLocals 报告未使用的变量错误
+
+vue 中尽量开启
+
+```typescript
+const createKeyboard = (modelID: number) => {
+  // highlight-start
+  const defaultModelID = 23
+  //'defaultModelID' is declared but its value is never read.
+  // highlight-end
+
+  return {type: 'keyboard', modelID}
+}
+```
+
+### noUnusedParameters 报告未使用的参数错误
+
+```typescript
+// highlight-start
+const createDefaultKeyboard = (modelID: number) => {
+  // 'modelID' is declared but its value is never read.
+  // highlight-end
+  const defaultModelID = 23
+  return {type: 'keyboard', modelID: defaultModelID}
+}
 ```
 
 ## 参考
