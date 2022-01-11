@@ -6,6 +6,7 @@ module.exports = [
       'react/goods/reactHookSkill',
       'react/goods/reactPerformance',
       'react/goods/reactSkill',
+      'react/goods/reactIOC',
       'react/goods/reactPersistedState',
       'react/goods/reactQuestionFix',
       'react/goods/reactBase',
@@ -22,7 +23,7 @@ module.exports = [
   {
     type: 'category',
     label: 'next.js',
-    items: ['react/nextjs/reactNextJsRenderMode'],
+    items: ['react/nextjs/reactNextJsRenderMode', 'react/nextjs/reactNextJsOftenFunctional'],
     collapsed: false
   },
   {
