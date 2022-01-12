@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import classnames from 'classnames'
 import Layout from '@theme/Layout'
 import Link from '@docusaurus/Link'
@@ -8,7 +8,7 @@ import styles from './styles.module.css'
 import CustomCodeBlock from '../components/CustomCodeBlock'
 import GithubCard from '../components/GithubCard'
 import HowCard from '../components/HowCard'
-import { repos } from '../data/github'
+import {repos} from '../data/github'
 
 const heroExample = `
 const messages = supabase
@@ -135,54 +135,54 @@ const features = [
     title: <>Chat apps</>,
     imageUrl: '',
     description: <>Build a realtime chat application using PostgreSQL and Expo</>,
-    href: '/docs/guides/examples',
+    href: '/docs/guides/examples'
   },
   {
     title: <>Realtime dashboards</>,
     imageUrl: '',
     description: <>Build live dashboards using PostgreSQL and D3.js</>,
-    href: '/docs/guides/examples',
+    href: '/docs/guides/examples'
   },
   {
     title: <>Logging</>,
     imageUrl: '',
     description: <>Log all your database changes to an immutable logging system</>,
-    href: '/docs/guides/examples',
+    href: '/docs/guides/examples'
   },
   {
     title: <>Realtime Games</>,
     imageUrl: '',
     description: <>Keep all players in-sync with game actions and leader dashboards.</>,
-    href: '/docs/guides/examples',
+    href: '/docs/guides/examples'
   },
   {
     title: <>Streaming analytics</>,
     imageUrl: '',
     description: <>Send actions and events to your data warehouses.</>,
-    href: '/docs/guides/examples',
+    href: '/docs/guides/examples'
   },
   {
     title: <>Backoffice and Admin</>,
     imageUrl: '',
     description: <>Build admin dashboards without stressing about conflict resolution.</>,
-    href: '/docs/guides/examples',
-  },
+    href: '/docs/guides/examples'
+  }
 ]
 
 function Home() {
   const context = useDocusaurusContext()
-  const { siteConfig = {} } = context
+  const {siteConfig = {}} = context
   const [visibleCodeExample, showCodeExample] = useState('READ')
   return (
     <Layout title={`${siteConfig.title}`} description={siteConfig.tagline}>
-      <main className="HomePage">
+      <main className='HomePage'>
         {/* HEADER */}
         <header className={classnames('hero full', styles.heroBanner)}>
-          <div className="container">
-            <div className="row">
-              <div className="col col--5">
-                <h2 className="hero__title">{siteConfig.tagline}</h2>
-                <p className="hero__subtitle">
+          <div className='container'>
+            <div className='row'>
+              <div className='col col--5'>
+                <h2 className='hero__title'>{siteConfig.tagline}</h2>
+                <p className='hero__subtitle'>
                   Supabase adds realtime and restful APIs to Postgres without a single line of code.
                 </p>
                 <div>
@@ -192,8 +192,7 @@ function Home() {
                       styles.button
                     )}
                     to={useBaseUrl('docs')}
-                    style={{ marginLeft: 0, marginTop: 10 }}
-                  >
+                    style={{marginLeft: 0, marginTop: 10}}>
                     Learn More
                   </Link>
                   <Link
@@ -202,15 +201,14 @@ function Home() {
                       styles.button
                     )}
                     to={'https://app.supabase.io'}
-                    style={{ marginTop: 10 }}
-                  >
+                    style={{marginTop: 10}}>
                     Beta sign up →
                   </Link>
                 </div>
               </div>
-              <div className="col col--7">
+              <div className='col col--7'>
                 <CustomCodeBlock
-                  header="Query your PostgreSQL database and listen in real-time."
+                  header='Query your PostgreSQL database and listen in real-time.'
                   js={heroExample}
                 />
               </div>
@@ -220,23 +218,20 @@ function Home() {
 
         <section
           style={{
-            padding: 30,
+            padding: 30
           }}
-          className="hero is--dark"
-        >
+          className='hero is--dark'>
           <div
-            className="container "
-            style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
-          >
-            <img src="/img/yc-gray.png" alt="Y Combinator" width="50" />
+            className='container '
+            style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <img src='/img/yc-gray.png' alt='Y Combinator' width='50' />
             <p
               style={{
                 fontWeight: 'bold',
                 padding: '0px 20px',
                 margin: 0,
-                display: 'inline-block',
-              }}
-            >
+                display: 'inline-block'
+              }}>
               Backed by Y Combinator
             </p>
           </div>
@@ -244,36 +239,28 @@ function Home() {
 
         {/* HOW */}
         <section className={'section-lg'}>
-          <div className="container">
+          <div className='container'>
             <div className={classnames('row', styles.responsiveCentered)}>
-              <div className="col col--6 col--offset-3">
-                <h2 className="">How it works</h2>
-                <p className="">
-                  Supabase helps you build faster, so you can focus on your core products.
-                </p>
+              <div className='col col--6 col--offset-3'>
+                <h2 className=''>How it works</h2>
+                <p className=''>Supabase helps you build faster, so you can focus on your core products.</p>
               </div>
             </div>
 
-            <div className="HowSections row is-multiline">
+            <div className='HowSections row is-multiline'>
               <div className={'col col--4 '}>
                 <div>
-                  <img
-                    className="diagram"
-                    src="/img/how-replication.png"
-                    alt="Database replication"
-                  />
+                  <img className='diagram' src='/img/how-replication.png' alt='Database replication' />
                 </div>
                 <div>
                   <HowCard
-                    title="Built with PostgreSQL"
-                    description={
-                      <>Sign up and query your Postgres database in less than 2 minutes.</>
-                    }
-                    featureTitle="You get"
+                    title='Built with PostgreSQL'
+                    description={<>Sign up and query your Postgres database in less than 2 minutes.</>}
+                    featureTitle='You get'
                     features={[
                       'Full Postgres database',
                       'Instant RESTful API',
-                      'Realtime notifications via websockets',
+                      'Realtime notifications via websockets'
                     ]}
                   />
                 </div>
@@ -281,17 +268,17 @@ function Home() {
 
               <div className={'col col--4 '}>
                 <div>
-                  <img className="diagram" src="/img/how-transformation.png" alt="Supabase" />
+                  <img className='diagram' src='/img/how-transformation.png' alt='Supabase' />
                 </div>
                 <div>
                   <HowCard
-                    title="Supabase handles the magic"
+                    title='Supabase handles the magic'
                     description={<>Supabase handles the stuff you're usually too busy to build.</>}
-                    featureTitle="You get"
+                    featureTitle='You get'
                     features={[
                       'APIs always in sync with your schema',
                       'Custom API docs for your schema',
-                      'Built-in security & monitoring',
+                      'Built-in security & monitoring'
                     ]}
                   />
                 </div>
@@ -299,18 +286,14 @@ function Home() {
 
               <div className={'col col--4 '}>
                 <div>
-                  <img className="diagram" src="/img/how-client-libs.png" alt="Client libraries" />
+                  <img className='diagram' src='/img/how-client-libs.png' alt='Client libraries' />
                 </div>
                 <div>
                   <HowCard
-                    title="Build realtime applications"
+                    title='Build realtime applications'
                     description={<>Supabase provides libraries and examples to get you started.</>}
-                    featureTitle="Build"
-                    features={[
-                      'Auto-updating dashboards',
-                      'IoT applications',
-                      'Realtime chat apps',
-                    ]}
+                    featureTitle='Build'
+                    features={['Auto-updating dashboards', 'IoT applications', 'Realtime chat apps']}
                   />
                 </div>
               </div>
@@ -320,98 +303,89 @@ function Home() {
 
         {/* For Devs */}
         <section className={styles.forDevelopers}>
-          <div className="container">
+          <div className='container'>
             <div className={classnames('row', styles.responsiveCentered)}>
-              <div className="col col--6 col--offset-3">
-                <h2 className="">For Developers</h2>
-                <p className="">
+              <div className='col col--6 col--offset-3'>
+                <h2 className=''>For Developers</h2>
+                <p className=''>
                   We introspect your database and provide APIs 
-                  <strong className="has-emphasis">instantly</strong> so you can stop building
-                  repetitive CRUD APIs and focus on building your products.
+                  <strong className='has-emphasis'>instantly</strong> so you can stop building repetitive CRUD
+                  APIs and focus on building your products.
                 </p>
               </div>
             </div>
-            <div className="ForDevelopers">
-              <div className="row">
-                <div className="ButtonTabs col col--3">
+            <div className='ForDevelopers'>
+              <div className='row'>
+                <div className='ButtonTabs col col--3'>
                   <div>
                     <button
                       className={`button button--${
                         visibleCodeExample === 'READ' ? 'info is-active' : 'info '
                       }`}
-                      onClick={() => showCodeExample('READ')}
-                    >
+                      onClick={() => showCodeExample('READ')}>
                       Get your data
                     </button>
                     <button
                       className={`button button--${
                         visibleCodeExample === 'SUBSCRIBE' ? 'info is-active' : 'info'
                       }`}
-                      onClick={() => showCodeExample('SUBSCRIBE')}
-                    >
+                      onClick={() => showCodeExample('SUBSCRIBE')}>
                       Realtime subscriptions
                     </button>
                     <button
                       className={`button button--${
                         visibleCodeExample === 'CREATE' ? 'info is-active' : 'info '
                       }`}
-                      onClick={() => showCodeExample('CREATE')}
-                    >
+                      onClick={() => showCodeExample('CREATE')}>
                       Create a record
                     </button>
                     <button
                       className={`button button--${
                         visibleCodeExample === 'UPDATE' ? 'info is-active' : 'info '
                       }`}
-                      onClick={() => showCodeExample('UPDATE')}
-                    >
+                      onClick={() => showCodeExample('UPDATE')}>
                       Update multiple rows
                     </button>
                     <button
                       className={`button button--${
                         visibleCodeExample === 'NODETS' ? 'info is-active' : 'info '
                       }`}
-                      onClick={() => showCodeExample('NODETS')}
-                    >
+                      onClick={() => showCodeExample('NODETS')}>
                       Node.js & TypeScript support
                     </button>
                     <button
                       className={`button button--${
                         visibleCodeExample === 'UMD' ? 'info is-active' : 'info '
                       }`}
-                      onClick={() => showCodeExample('UMD')}
-                    >
+                      onClick={() => showCodeExample('UMD')}>
                       Install from CDN
                     </button>
                   </div>
                 </div>
-                <div className="col col--9 code-with-header">
+                <div className='col col--9 code-with-header'>
                   {visibleCodeExample === 'READ' && (
-                    <CustomCodeBlock
-                      header="Get all public rooms and their messages"
-                      js={readExample}
-                    />
+                    <CustomCodeBlock header='Get all public rooms and their messages' js={readExample} />
                   )}
                   {visibleCodeExample === 'SUBSCRIBE' && (
                     <CustomCodeBlock
-                      header="Receive realtime messages in an example chat room"
+                      header='Receive realtime messages in an example chat room'
                       js={subscribeExample}
                     />
                   )}
                   {visibleCodeExample === 'CREATE' && (
-                    <CustomCodeBlock header="Create a new chat room" js={createExample} />
+                    <CustomCodeBlock header='Create a new chat room' js={createExample} />
                   )}
                   {visibleCodeExample === 'UPDATE' && (
-                    <CustomCodeBlock header="Update a user" js={updateExample} />
+                    <CustomCodeBlock header='Update a user' js={updateExample} />
                   )}
                   {visibleCodeExample === 'NODETS' && (
                     <CustomCodeBlock
-                      header="Server-side & client-side TypeScript support e.g. in Next.js API routes"
+                      header='Server-side & client-side TypeScript support e.g. in Next.js API routes'
                       js={nodeTSExample}
                     />
                   )}
                   {visibleCodeExample === 'UMD' && (
-                    <CustomCodeBlock header="Supabase-js standalone bundle" js={umdExample} />
+                    <CustomCodeBlock header='Supabase-js standalone bundle' js={umdExample} />
                   )}
                 </div>
               </div>
@@ -432,24 +406,20 @@ function Home() {
         </section> */}
 
         <section className={'section-lg'}>
-          <div className="container">
+          <div className='container'>
             <div className={classnames('row', styles.centered)}>
-              <div className="col col--6 col--offset-3">
-                <h2 className="">Self-documenting</h2>
-                <p className="">
-                  We introspect your database to give you instant, custom documentation for your
-                  REST and Realtime APIs.
+              <div className='col col--6 col--offset-3'>
+                <h2 className=''>Self-documenting</h2>
+                <p className=''>
+                  We introspect your database to give you instant, custom documentation for your REST and
+                  Realtime APIs.
                 </p>
               </div>
             </div>
 
             <div className={classnames('row', styles.centered)}>
-              <div className="col">
-                <img
-                  className={''}
-                  src={'/img/custom-docs.png'}
-                  alt={'Self-documenting dashboards'}
-                />
+              <div className='col'>
+                <img className={''} src={'/img/custom-docs.png'} alt={'Self-documenting dashboards'} />
               </div>
             </div>
           </div>
@@ -478,21 +448,21 @@ function Home() {
 
         {/* OSS */}
         <section className={'section-lg'}>
-          <div className="container">
+          <div className='container'>
             <div className={classnames('row', styles.responsiveCentered)}>
-              <div className="col col--6 col--offset-3">
-                <h2 className="">Open source</h2>
-                <p className="">
+              <div className='col col--6 col--offset-3'>
+                <h2 className=''>Open source</h2>
+                <p className=''>
                   Supabase <Link to={'/oss'}>loves open source</Link>. Follow us on{' '}
-                  <a href="https://github.com/supabase">GitHub</a>. <strong>Watch</strong> the
-                  releases of each repo to get notified when we are ready for Beta launch.
+                  <a href='https://github.com/supabase'>GitHub</a>. <strong>Watch</strong> the releases of
+                  each repo to get notified when we are ready for Beta launch.
                 </p>
               </div>
             </div>
 
-            <div className="row is-multiline">
+            <div className='row is-multiline'>
               {repos
-                .filter((x) => ['supabase', 'realtime', 'postgres', 'pg-api'].includes(x.name))
+                .filter(x => ['supabase', 'realtime', 'postgres', 'pg-api'].includes(x.name))
                 .map((props, idx) => (
                   <div className={'col col--6'} key={idx}>
                     <GithubCard
@@ -506,8 +476,8 @@ function Home() {
                   </div>
                 ))}
             </div>
-            <div style={{ textAlign: 'right' }}>
-              <a href="/oss">See more →</a>
+            <div style={{textAlign: 'right'}}>
+              <a href='/oss'>See more →</a>
             </div>
           </div>
         </section>
@@ -559,29 +529,24 @@ function Home() {
           style={{
             marginTop: 100,
             padding: '50px 0',
-            borderTop: '1px solid var(--custom-border-color)',
+            borderTop: '1px solid var(--custom-border-color)'
           }}
-          className="hero is--dark"
-        >
-          <div className="container text--center">
+          className='hero is--dark'>
+          <div className='container text--center'>
             {/* <div>
               <h2>Get Early Access</h2>
             </div> */}
-            <div className="">
+            <div className=''>
               <a
-                className={classnames(
-                  'button hero--button button--md responsive-button',
-                  styles.button
-                )}
-                href="https://www.producthunt.com/posts/supabase?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-supabase"
-                style={{ width: 250, height: 54, margin: 0, padding: 0, display: 'inline-block' }}
-              >
+                className={classnames('button hero--button button--md responsive-button', styles.button)}
+                href='https://www.producthunt.com/posts/supabase?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-supabase'
+                style={{width: 250, height: 54, margin: 0, padding: 0, display: 'inline-block'}}>
                 <img
-                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=203792&theme=dark"
-                  alt="Supabase - An open source Firebase alternative | Product Hunt Embed"
-                  style={{ width: 250, height: 54 }}
-                  width="250px"
-                  height="54px"
+                  src='https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=203792&theme=dark'
+                  alt='Supabase - An open source Firebase alternative | Product Hunt Embed'
+                  style={{width: 250, height: 54}}
+                  width='250px'
+                  height='54px'
                 />
               </a>
               <Link
@@ -590,8 +555,7 @@ function Home() {
                   styles.button
                 )}
                 to={'https://app.supabase.io'}
-                style={{ margin: 5 }}
-              >
+                style={{margin: 5}}>
                 Beta sign up →
               </Link>
             </div>
@@ -605,7 +569,7 @@ function Home() {
 // export default Home
 export default () => {
   if (typeof window !== 'undefined') {
-    window.location.replace('/docs/enginee/babel/babel')
+    window.location.replace('/docs/enginee/idea/frameIdea')
   }
   return null
 }
