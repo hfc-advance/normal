@@ -1,5 +1,9 @@
 module.exports = [
   {
+    type: 'doc',
+    id: 'enginee/idea/frameIdea'
+  },
+  {
     type: 'category',
     label: 'monorepo',
     collapsed: true,
