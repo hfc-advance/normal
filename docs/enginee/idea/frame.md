@@ -45,6 +45,12 @@ Umi 做了很多编译时的事，如果你用过 umi，应该了解 src 下有�
 
 ![super-compile](../../../static/img/super_compile.png)
 
+## cli 实践
+
+### 必用的工具包
+
+1. [google/zx](https://github.com/google/zx) 内置了一些工具包；能够使用 bash 语法
+
 ## 参考
 
 - [Umi 4 设计思路文字稿](https://mp.weixin.qq.com/s/FTZ93pScf3gykd39voEpng)
