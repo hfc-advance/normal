@@ -175,7 +175,7 @@ function Home() {
   const [visibleCodeExample, showCodeExample] = useState('READ')
   return (
     <Layout title={`${siteConfig.title}`} description={siteConfig.tagline}>
-      <main className='HomePage'>
+      <main className='HomePage heti'>
         {/* HEADER */}
         <header className={classnames('hero full', styles.heroBanner)}>
           <div className='container'>
